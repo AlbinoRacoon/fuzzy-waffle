@@ -1,0 +1,71 @@
+<script>
+  import { onMount, onDestroy } from 'svelte';
+  import jQuery from 'jquery';
+  import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css';
+  import 'datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css';
+  import 'datatables.net-fixedcolumns-bs5/css/fixedColumns.bootstrap5.min.css';
+  import 'datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css';
+  import 'datatables.net/js/dataTables.min.js';
+  import 'datatables.net-bs5/js/dataTables.bootstrap5.min.js';
+  import 'datatables.net-buttons/js/dataTables.buttons.min.js';
+  import 'datatables.net-buttons/js/buttons.colVis.min.js';
+  import 'datatables.net-buttons/js/buttons.html5.min.js';
+  import 'datatables.net-buttons/js/buttons.print.min.js';
+  import 'datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js';
+  import 'datatables.net-responsive/js/dataTables.responsive.min.js';
+  import 'datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js';
+  import 'datatables.net-fixedcolumns/js/dataTables.fixedColumns.min.js';
+  import 'datatables.net-fixedcolumns-bs5/js/fixedColumns.bootstrap5.min.js';
+  
+  let table;
+  let datatable;
+  
+  onMount(async () => {
+    window.jQuery = jQuery;
+    
+    if (jQuery) {
+      datatable = jQuery(table).DataTable({
+        dom: "<'row mb-3'<'col-md-4 mb-3 mb-md-0'l><'col-md-8'<'d-flex justify-content-end'fB>>>t<'row align-items-center mt-3'<'me-auto col-md-6 mb-3 mb-md-0'i><'mb-0 col-md-auto ms-auto'p>>",
+        lengthMenu: [ 10, 20, 30, 40, 50 ],
+        responsive: true,
+        buttons: [
+          { extend: 'print', className: 'btn btn-outline-default btn-sm ms-2' },
+          { extend: 'csv', className: 'btn btn-outline-default btn-sm' }
+        ]
+      });
+    }
+  });
+  
+  onDestroy(() => {
+    if (datatable) {
+      datatable.destroy();
+    }
+  });
+</script>
+
+
+<table bind:this={table} class="table text-nowrap w-100">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Office</th>
+      <th>Age</th>
+      <th>Start Date</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.</td>
+      <td>Tiger Nixon</td>
+      <td>System Architect</td>
+      <td>Edinburgh</td>
+      <td>61</td>
+      <td>2024/04/25</td>
+      <td>$320,800</td>
+    </tr>
+    ...
+  </tbody>
+</table>

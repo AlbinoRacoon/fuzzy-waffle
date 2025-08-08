@@ -1,0 +1,1060 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title> Documentation - Color Admin</title>
+	<!-- Bootstrap styles -->
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/docs.css" rel="stylesheet">
+	<link href="assets/bootstrap/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+	<div class="navbar navbar-inverse navbar-page">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="index.html">Documentation</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="">
+							<a href="index.html">HTML</a>
+						</li>
+						<li class="">
+							<a href="index_ajax.html">Ajax</a>
+						</li>
+						<li class="">
+							<a href="index_angular_1x.html">Angular 1.x</a>
+						</li>
+						<li class="">
+							<a href="index_angular_20.html">Angular 20</a>
+						</li>
+						<li class="">
+							<a href="index_laravel.html">Laravel 12</a>
+						</li>
+						<li class="">
+							<a href="index_vue.html">Vue 3</a>
+						</li>
+						<li class="">
+							<a href="index_react.html">React 19</a>
+						</li>
+						<li class="">
+							<a href="index_asp.html">ASP.NET</a>
+						</li>
+						<li class="">
+							<a href="index_django.html">Django</a>
+						</li>
+						<li class="active">
+							<a href="index_svelte.html">Svelte</a>
+						</li>
+						<li class="">
+							<a href="index_nextjs.html">NextJS</a>
+						</li>
+						</ul>
+					<ul class="nav pull-right">
+						<li class="">
+							<a href="index_change_log.html">Change Log</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1 class="text-center">Color Admin</h1>
+			<p class="lead text-center">&ldquo;Svelte + Vite JS Version&rdquo; Documentation by &ldquo;Sean Ngu&rdquo; v5.5.2</p>
+		</div>
+		<div class="jumbotron-cover"></div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="well with-cover clearfix">
+					<div class="well-cover" style="background-image: url(assets/images/svelte.jpg); background-size: auto 80%; background-position: center; background-repeat: no-repeat; background-color: #fff;"></div>
+					<p>
+						<strong>
+							Updated on: 08/July/2025<br>
+							By: Sean Ngu<br>
+						</strong>
+					</p>
+					<p style="margin: 0;">
+						If you have any inquiries or require further assistance beyond what is covered in this help file,
+						please do not hesitate to send us a <a href="https://wrapbootstrap.com/user/seanngu/message" target="_blank">message</a>
+						through Wrapbootstrap. We are more than happy to help. <br /><br />Thank you very much!
+					</p>
+				</div>
+			</div><!-- end span12 -->
+		</div><!-- end row -->
+		<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<li><a href="#installation"><i class="icon-chevron-right"></i>Installation</a></li>
+					<li><a href="#file-structure"><i class="icon-chevron-right"></i>File Structure</a></li>
+					<li><a href="#layout-structure"><i class="icon-chevron-right"></i>Layout Structure</a></li>
+					<li><a href="#components"><i class="icon-chevron-right"></i>Components</a></li>
+					<li><a href="#svelte-store"><i class="icon-chevron-right"></i>Svelte Store</a></li>
+					<li><a href="#svelte-store-app-options"><i class="icon-chevron-right"></i>Svelte Store - App Options</a></li>
+					<li><a href="#svelte-store-app-variables"><i class="icon-chevron-right"></i>Svelte Store - App Variables</a></li>
+					<li><a href="#svelte-store-app-sidebar-menus"><i class="icon-chevron-right"></i>Svelte Store - App Sidebar Menus</a></li>
+					<li><a href="#theme-color"><i class="icon-chevron-right"></i>Theme Color</a></li>
+					<li><a href="#darkMode"><i class="icon-chevron-right"></i>Dark Mode <span class="label label-important">NEW</span></a></li>
+					<li><a href="#page-rtl-mode"><i class="icon-chevron-right"></i>RTL Mode <span class="label">NEW</span></a></li>
+					<li><a href="#page-switch-design"><i class="icon-chevron-right"></i>Switch Design <span class="label label-important">NEW</span></a></li>
+					<li><a href="#scssConfiguration"><i class="icon-chevron-right"></i>SCSS Configuration</a></li>
+					<li><a href="#bootstrap-components"><i class="icon-chevron-right"></i>Bootstrap Components</a></li>
+					<li><a href="#bootstrap-javascript"><i class="icon-chevron-right"></i>Bootstrap Javascript</a></li>
+					<li><a href="#npm-package"><i class="icon-chevron-right"></i>NPM Package</a></li>
+				</ul>
+			</div>
+			<div class="span9">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="installation"><strong>A) Installation</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Follow the following step to install the laravel in your localhost<br />
+							You may refer to their official documentation for how to setup the development environment. <br />
+							<a href="https://svelte.dev/docs/introduction" target="_blank">Setup Guide</a>
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- run the following command --&gt; 
+cd /your-path-url/template_svelte
+npm install
+npm run dev
+
+&lt;!-- browse the url --&gt; 
+http://localhost:5173/
+</pre>
+						<p>
+							Make sure node.js >= <code>v22.x</code> and npm >= <code>v11.x</code> has been installed on your localhost / server
+						</p>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="file-structure"><strong>B) File Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>File structure overview for Svelte Version</p>
+<pre class="prettyprint linenums">
+template_svelte/
+  ├── package.json
+  ├── README.md
+  ├── static/
+  ├── src/
+  │   ├── app.html
+  │   ├── components/
+  │   ├── lib/
+  │   ├── routes/
+  │   ├── scss/
+  │   └── stores/
+  ├── svelte.config.js
+  └── vite.config.js
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="layout-structure"><strong>C) Layout Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Below is the code from <code>/routes/+layout.svelte</code> which include the app header, sidebar, content, footer and theme panel. You may remove the component if you are not using it.</p>
+<pre class="prettyprint linenums">
+&lt;script&gt;
+  import '/src/scss/svelte.scss';
+  import 'bootstrap-icons/font/bootstrap-icons.min.css';
+  import '@fortawesome/fontawesome-free/css/all.min.css';
+  import 'perfect-scrollbar/css/perfect-scrollbar.css';
+  import { Body, classList, style } from 'svelte-body';
+  import AppLoader from '/src/components/app/AppLoader.svelte';
+  import AppHeader from '/src/components/app/AppHeader.svelte';
+  import AppSidebar from '/src/components/app/AppSidebar.svelte';
+  import AppSidebarRight from '/src/components/app/AppSidebarRight.svelte';
+  import AppTopMenu from '/src/components/app/AppTopMenu.svelte';
+  import AppThemePanel from '/src/components/app/AppThemePanel.svelte';
+  import { onMount } from 'svelte';
+  import { appOptions } from '/src/stores/appOptions.js';
+  import { appVariables, generateVariables } from '/src/stores/appVariables.js';
+  import { setPageTitle } from '$lib/utils';
+  
+  function handleResize() {
+    $appOptions.isMobile = window.innerWidth &lt;= 768; // Adjust the threshold as needed
+  }
+  
+  function handleScroll() {
+    var scrollPosition = window.scrollY || window.pageYOffset;
+    if (scrollPosition &gt; 0) {
+      $appOptions.hasScroll = true;
+    } else {
+      $appOptions.hasScroll = false;
+    }
+  }
+  
+  onMount(async () =&gt; {
+    import('bootstrap');
+    
+    $appVariables = generateVariables();
+    $appOptions.isInit = true;
+    $appOptions.isMobile = window.innerWidth &lt;= 768;
+    
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll); 
+  });
+&lt;/script&gt;
+
+&lt;AppLoader /&gt;
+
+&lt;svelte:body use:classList={($appOptions.isInit ? 'app-init ' : '') + ($appOptions.appBoxedLayout ? 'boxed-layout ' : '')} /&gt;
+
+&lt;div id="app" class="app{($appOptions.appClass) ? ' '+ $appOptions.appClass : ''}" 
+  class:app-gradient-enabled={$appOptions.appGradientEnabled}
+  class:app-header-fixed={$appOptions.appHeaderFixed && !$appOptions.appHeaderHide}
+  class:app-sidebar-fixed={$appOptions.appSidebarFixed && !$appOptions.appSidebarHide}
+  class:app-sidebar-minified={$appOptions.appSidebarMinified && !$appOptions.appSidebarHide}
+  class:app-sidebar-mobile-toggled={$appOptions.appSidebarMobileToggled}
+  class:app-content-full-height={$appOptions.appContentFullHeight}
+  class:app-without-sidebar={$appOptions.appSidebarHide}
+  class:app-without-header={$appOptions.appHeaderHide}
+  class:app-with-top-menu={$appOptions.appTopMenu}
+  class:app-with-wide-sidebar={$appOptions.appSidebarWide}
+  class:app-with-end-sidebar={$appOptions.appSidebarEnd}
+  class:app-with-two-sidebar={$appOptions.appSidebarTwo}
+  class:app-with-hover-sidebar={$appOptions.appSidebarHover}
+  class:app-sidebar-end-toggled={$appOptions.appSidebarEndToggled && !$appOptions.isMobile}
+  class:app-sidebar-end-mobile-toggled={$appOptions.appSidebarEndMobileToggled && $appOptions.isMobile}
+  class:app-footer-fixed={$appOptions.appFooterFixed}
+  class:has-scroll={$appOptions.hasScroll}
+&gt;
+  {#if !$appOptions.appHeaderHide}&lt;AppHeader /&gt;{/if}
+  {#if !$appOptions.appSidebarHide}&lt;AppSidebar /&gt;{/if}
+  {#if $appOptions.appSidebarTwo}&lt;AppSidebarRight /&gt;{/if}
+  {#if $appOptions.appTopMenu}&lt;AppTopMenu /&gt;{/if}
+  &lt;AppThemePanel /&gt;
+  
+  &lt;div id="content" class="app-content{($appOptions.appContentClass) ? ' '+ $appOptions.appContentClass : ''}"&gt;
+    &lt;slot /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="components"><strong>D) Components</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>List of components inside the components folder</p>
+<pre class="prettyprint linenums">
+/src/components/
+├── app/
+│   ├── AppFooter.svelte
+│   ├── AppHeader.svelte
+│   ├── AppHeaderMegaMenu.svelte
+│   ├── AppLoader.svelte
+│   ├── AppSidebar.svelte
+│   ├── AppSidebarRight.svelte
+│   ├── AppThemePanel.svelte
+│   ├── AppTopMenu.svelte
+│   └── NavScrollTo.svelte
+├── bootstrap/
+│   ├── Card.svelte
+│   ├── CardBody.svelte
+│   ├── CardExpandToggler.svelte
+│   ├── CardFooter.svelte
+│   ├── CardGroup.svelte
+│   ├── CardHeader.svelte
+│   ├── CardImgOverlay.svelte
+│   ├── CardSubtitle.svelte
+│   ├── CardText.svelte
+│   ├── CardTitle.svelte
+│   ├── Panel.svelte
+│   ├── PanelBody.svelte
+│   ├── PanelExpandToggler.svelte
+│   ├── PanelFooter.svelte
+│   ├── PanelGroup.svelte
+│   ├── PanelHeader.svelte
+│   ├── PanelImgOverlay.svelte
+│   ├── PanelTitle.svelte
+│   └── PanelToolbar.svelte
+└── plugins/
+    ├── Apexcharts.svelte
+    ├── Chartjs.svelte
+    ├── HighlightJs.svelte
+    └── PerfectScrollbar.svelte
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="svelte-store"><strong>E) Svelte Store</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>This template used <a href="https://svelte.dev/docs/svelte-store" target="_blank">svelte</a> to create the store and share the states variable between the components. Store files can be found via <code>/src/stores/</code></p>
+<pre class="prettyprint linenums">
+/src/stores/
+├─ appOptions.js            // global app option states
+├─ appSidebarMenus.js       // global app sidebar menu list
+├─ appTopMenuMenus.js       // global app top menu menu list
+└─ appVariables.js          // global app variable (fetched from css / font variables)
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="svelte-store-app-options"><strong>F) Svelte Store - App Options</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>You can use the global app option from <code>/stores/appOptions.js</code></p>
+<pre class="prettyprint linenums">
+&lt;script&gt;
+  import { onMount, onDestroy } from 'svelte';
+  import { appOptions } from '/src/stores/appOptions.js';
+
+  onMount(async () => {
+    // available app option
+    $appOptions.appClass = '';
+    
+    $appOptions.appHeaderHide = false;
+    $appOptions.appHeaderFixed = true;
+    $appOptions.appHeaderInverse = false;
+    $appOptions.appHeaderMegaMenu = false;
+    $appOptions.appHeaderLanguageBar = false;
+    
+    $appOptions.appSidebarHide = false;
+    $appOptions.appSidebarFixed = true;
+    $appOptions.appSidebarGrid = false;
+    $appOptions.appSidebarToggled = false;
+    $appOptions.appSidebarMobileToggled = false;
+    $appOptions.appSidebarTwo = false;
+    $appOptions.appSidebarEnd = false;
+    $appOptions.appSidebarEndToggled = false;
+    $appOptions.appSidebarEndMobileToggled = false;
+    $appOptions.appSidebarWide = false;
+    $appOptions.appSidebarLight = false;
+    $appOptions.appSidebarTransparent = false;
+    $appOptions.appSidebarHover = false;
+    
+    $appOptions.appTopMenu = false;
+    
+    $appOptions.appContentFullHeight = false;
+    $appOptions.appContentClass = '';
+    
+    $appOptions.appFooterFixed = false;
+    
+    $appOptions.appBoxedLayout = false;
+    $appOptions.appGradientEanbled = false;
+    $appOptions.appThemePanelToggled = false;
+    $appOptions.appRtlEnabled = false;
+  });
+  
+  onDestroy(() => {
+    // set to default before leave the page
+    $appOptions.appFooter = false;
+  });
+&lt;/script&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="svelte-store-app-variables"><strong>G) Svelte Store - App Variable</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>You can use the global app variables (css color / font family) from <code>/stores/appVariables.js</code></p>
+<pre class="prettyprint linenums">
+&lt;script&gt;
+  import { onMount, onDestroy } from 'svelte';
+  import { appVariables } from '/src/stores/appVariables.js';
+  
+  let chart;
+  
+  function renderChart(appVariables) {
+    // available font
+    appVariables.font.bodyFontFamily;
+    appVariables.font.bodyFontSize;
+    appVariables.font.bodyFontWeight;
+    appVariables.font.bodyLineHeight;
+    
+    // available color
+    appVariables.color.theme;
+    appVariables.color.themeRgb;
+    appVariables.color.themeColor;
+    appVariables.color.themeColorRgb;
+    
+    appVariables.color.default;
+    appVariables.color.defaultRgb;
+    
+    appVariables.color.primary;
+    appVariables.color.primaryRgb;
+    appVariables.color.primaryBgSubtle;
+    appVariables.color.primaryText;
+    appVariables.color.primaryBorderSubtle;
+    
+    appVariables.color.secondary;
+    appVariables.color.secondaryRgb;
+    appVariables.color.secondaryBgSubtle;
+    appVariables.color.secondaryText;
+    appVariables.color.secondaryBorderSubtle;
+    
+    appVariables.color.success;
+    appVariables.color.successRgb;
+    appVariables.color.successBgSubtle;
+    appVariables.color.successText;
+    appVariables.color.successBorderSubtle;
+    
+    appVariables.color.warning;
+    appVariables.color.warningRgb;
+    appVariables.color.warningBgSubtle;
+    appVariables.color.warningText;
+    appVariables.color.warningBorderSubtle;
+    
+    appVariables.color.info;
+    appVariables.color.infoRgb;
+    appVariables.color.infoBgSubtle;
+    appVariables.color.infoText;
+    appVariables.color.infoBorderSubtle;
+    
+    appVariables.color.danger;
+    appVariables.color.dangerRgb;
+    appVariables.color.dangerBgSubtle;
+    appVariables.color.dangerText;
+    appVariables.color.dangerBorderSubtle;
+    
+    appVariables.color.light;
+    appVariables.color.lightRgb;
+    appVariables.color.lightBgSubtle;
+    appVariables.color.lightText;
+    appVariables.color.lightBorderSubtle;
+    
+    appVariables.color.dark;
+    appVariables.color.darkRgb;
+    appVariables.color.darkBgSubtle;
+    appVariables.color.darkText;
+    appVariables.color.darkBorderSubtle;
+    
+    appVariables.color.inverse;
+    appVariables.color.inverseRgb;
+    
+    appVariables.color.white;
+    appVariables.color.whiteRgb;
+    
+    appVariables.color.black;
+    appVariables.color.blackRgb;
+    
+    appVariables.color.teal;
+    appVariables.color.tealRgb;
+    
+    appVariables.color.indigo;
+    appVariables.color.indigoRgb;
+    
+    appVariables.color.purple;
+    appVariables.color.purpleRgb;
+    
+    appVariables.color.yellow;
+    appVariables.color.yellowRgb;
+    
+    appVariables.color.pink;
+    appVariables.color.pinkRgb;
+    
+    appVariables.color.cyan;
+    appVariables.color.cyanRgb;
+    
+    appVariables.color.gray100;
+    appVariables.color.gray200;
+    appVariables.color.gray300;
+    appVariables.color.gray400;
+    appVariables.color.gray500;
+    appVariables.color.gray600;
+    appVariables.color.gray700;
+    appVariables.color.gray800;
+    appVariables.color.gray900;
+    appVariables.color.gray100Rgb;
+    appVariables.color.gray200Rgb;
+    appVariables.color.gray300Rgb;
+    appVariables.color.gray400Rgb;
+    appVariables.color.gray500Rgb;
+    appVariables.color.gray600Rgb;
+    appVariables.color.gray700Rgb;
+    appVariables.color.gray800Rgb;
+    appVariables.color.gray900Rgb;
+    
+    appVariables.color.muted;
+    appVariables.color.mutedRgb;
+    
+    appVariables.color.emphasisColor;
+    appVariables.color.emphasisColorRgb;
+    
+    appVariables.color.bodyBg;
+    appVariables.color.bodyBgRgb;
+    
+    appVariables.color.bodyColor;
+    appVariables.color.bodyColorRgb;
+    
+    appVariables.color.headingColor;
+    
+    appVariables.color.secondaryColor;
+    appVariables.color.secondaryColorRgb;
+    appVariables.color.secondaryBg;
+    appVariables.color.secondaryBgRgb;
+      
+    appVariables.color.tertiaryColor;
+    appVariables.color.tertiaryColorRgb;
+    appVariables.color.tertiaryBg;
+    appVariables.color.tertiaryBgRgb;
+      
+    appVariables.color.linkColor;
+    appVariables.color.linkColorRgb;
+    appVariables.color.linkHoverColor;
+    appVariables.color.linkHoverColorRgb;
+      
+    appVariables.color.borderColor;
+    appVariables.color.borderColorTranslucent;
+  }
+
+  onMount(async () => {
+    unsubscribe = appVariables.subscribe(value => {
+      if (value.color) {
+        chart = renderChart(value);
+      }
+    });
+  });
+  
+  onDestroy(() => {
+    if (unsubscribe) {
+      unsubscribe();
+    }
+  });
+&lt;/script&gt;
+
+&lt;!-- html --&gt;
+{#if chart}
+	// do your thing here
+{/if}
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="svelte-store-app-sidebar-menus"><strong>H) Svelte Store - App Sidebar Menus</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Set the app sidebar menu list from from <code>/stores/appSidebarMenus.js</code></p>
+<pre class="prettyprint linenums">
+// single level structure
+{
+  'url': '/',
+  'icon': 'fa fa-sitemap',
+  'text': 'Dashboard'
+},
+
+// multi level structure 
+{
+  'icon': 'fa fa-envelope',
+  'text': 'Email',
+  'children': [{
+    'url': '/email/inbox',
+    'action': 'Inbox',
+    'text': 'Inbox'
+  }, {
+    'url': '/email/compose',
+    'action': 'Compose',
+    'text': 'Compose'
+  }, {
+    'url': '/email/detail',
+    'action': 'Detail',
+    'text': 'Detail'
+  }]
+}
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="theme-color"><strong>I) Theme Color</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							The default theme color is set to the <code>teal</code> color. You may change it from <code>/src/scss/default/_variables.scss</code>
+						</p>
+<pre class="prettyprint linenums">
+// LINE 100
+$theme:        $teal !default;
+</pre>
+						<div class="alert alert-info">
+							<b>***IMPORTANT***</b><br />
+
+							You might need to remove the <code>&lt;AppThemePanel /&gt;</code> component from <code>/routes/+layout.svelte</code>.<br /><br />
+							This is because app-theme-panel will store a <b>localStorage</b> variable and append the theme class automatically when page load
+							if you have select any theme color before from theme panel.
+						</div>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="darkMode"><strong>J) Dark Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							If you wish to enable the dark mode instead, you can easily do so by adding the <code>data-bs-theme="dark"</code> attribute to the HTML tag in <code>/src/app.html</code>. 
+						</p>
+						<h4>Here's an example:</h4>
+						<b>change from</b>
+						<pre class="prettyprint linenums">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;/html&gt;
+</pre>
+						<b>to</b>
+						<pre class="prettyprint linenums">&lt;!DOCTYPE html&gt;
+&lt;html lang="en" data-bs-theme="dark"&gt;
+&lt;/html&gt;
+</pre>
+						<p>
+							With this example, the <code>data-bs-theme="dark"</code> attribute has been added to html tag. This will enable the dark mode to the entire page.
+						</p>
+						<p>
+							<b>OR</b>
+						</p>
+						<p>
+							If you want to apply light / dark mode to a single component only, you can add the <code>data-bs-theme="dark|light"</code> attribute to that component.
+						</p>
+						<pre class="prettyprint linenums">&lt;Panel data-bs-theme="dark"&gt;
+  &lt;PanelBody&gt;
+    &lt;!-- your component content here --&gt;
+  &lt;/PanelBody&gt;
+&lt;/Panel&gt;
+</pre>
+						
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-rtl-mode"><strong>K) RTL Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Add the <code>dir="rtl"</code> attribute to <code>&lt;html&gt;</code> for <code>/src/app.html</code> in order to enable Right-To-Left (RTL) layout direction.</p>
+<pre class="prettyprint linenums">
+&lt;html lang="en" dir="rtl"&gt;
+</pre>
+						<p>This will flip the layout direction of the entire page to support RTL languages like Arabic, Hebrew, or Persian.</p>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-switch-design"><strong>L) Switch Design</strong> - <a href="#top">top</a></h3>
+						</div>
+						<h4 style="margin-bottom: 15px">Apple Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change variable from <code>template_svelte/src/scss/svelte.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'apple/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px;">Add the following code to <code>template_svelte/src/app.html</code>.</div>							
+<pre class="prettyprint linenums">
+&lt;script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"&gt;&lt;/script&gt;
+</pre>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Ionicons and background color class is needed as well.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;ion-icon name="pulse-outline" class="bg-gradient-blue"&gt;&lt;/ion-icon&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Facebook Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change variable from <code>template_svelte/src/scss/svelte.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'facebook/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Enable app header inverse from <code>template_svelte/src/stores/appOptions.js</code>.</div>
+<pre class="prettyprint linenums">
+...
+appHeaderInverse: true,     // LINE 10
+...
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Transparent Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change variable from <code>template_svelte/src/scss/svelte.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'transparent/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the <code>.app-cover</code> next to the <code>&lt;body&gt;</code> tag in <code>template_svelte/src/app.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;body&gt;
+  &lt;!-- BEGIN page-cover --&gt;
+  &lt;div class="app-cover"&gt;&lt;/div&gt;
+  &lt;!-- END page-cover --&gt;
+  ...
+&lt;/body&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Google Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change variable from <code>template_svelte/src/scss/svelte.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'google/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Material Icons.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;i class="material-icons"&gt;home&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Enable app sidebar wide & light from <code>template_svelte/src/stores/appOptions.js</code>.</div>
+<pre class="prettyprint linenums">
+...
+appSidebarWide: true,   // LINE 23
+appSidebarLight: true,  // LINE 24
+...
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the navbar desktop toggler to the <code>/src/components/app/AppHeader.svelte</code></code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN navbar-header --&gt;
+  &lt;div class="navbar-header"&gt;
+    &lt;button type="button" class="navbar-desktop-toggler"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button type="button" class="navbar-mobile-toggler"&gt;
+      ...
+    &lt;/button&gt;
+    &lt;a class="navbar-brand"&gt;
+      Color Admin
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- END navbar-header --&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Material Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change variable from <code>template_svelte/src/scss/svelte.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'material/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Material Icons.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;i class="material-icons"&gt;home&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Enable app sidebar wide from <code>template_svelte/src/stores/appOptions.js</code>.</div>
+<pre class="prettyprint linenums">
+...
+appSidebarWide: true,  // LINE 23
+...
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the navbar desktop toggler to the <code>/src/components/app/AppHeader.svelte</code></code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN navbar-header --&gt;
+  &lt;div class="navbar-header"&gt;
+    &lt;button type="button" class="navbar-desktop-toggler"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button type="button" class="navbar-mobile-toggler"&gt;
+      ...
+    &lt;/button&gt;
+    &lt;a class="navbar-brand"&gt;
+      Color Admin
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- END navbar-header --&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+							
+							<li>
+								<div style="padding-bottom: 5px">Add the floating navbar form to the <code>/src/components/app/AppHeader.svelte</code>  AND <b>REMOVE</b> the default <code>.navbar-form</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN header-nav --&gt;
+  &lt;div class="navbar-nav"&gt;
+    &lt;div class="navbar-item"&gt;
+      &lt;a href="#" class="navbar-link icon"&gt;
+        &lt;i class="material-icons"&gt;search&lt;/i&gt;
+      &lt;/a&gt;
+      
+      &lt;!-- REMOVE IT --&gt;
+      &lt;div class="navbar-item navbar-form"&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/div&gt;
+    ...
+  &lt;/div&gt;
+  &lt;!-- END header-nav --&gt;
+  
+  &lt;div class="navbar-floating-form"&gt;
+    &lt;button class="search-btn" type="submit"&gt;&lt;i class="material-icons"&gt;search&lt;/i&gt;&lt;/button&gt;
+    &lt;input type="text" class="form-control" placeholder="Search Something..." /&gt;
+    &lt;a href="#" class="close"&gt;
+      &lt;i class="material-icons"&gt;close&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the <code>.app-loader</code>  in <code>template_svelte/src/app.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #loader --&gt;
+&lt;div id="loader" class="app-loader"&gt;
+  &lt;div class="material-loader"&gt;
+    &lt;svg class="circular" viewBox="25 25 50 50"&gt;
+      &lt;circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"&gt;&lt;/circle&gt;
+    &lt;/svg&gt;
+    &lt;div class="message"&gt;Loading...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- END #loader --&gt;
+</pre>
+							</li>
+						</ol>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="rtlMode"><strong>M) RTL Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>To enable RTL mode, follow these steps:</p>
+						<ol>
+							<li style="margin-bottom: 10px;">Navigate to the <code>/src/scss/default/_variables.scss</code> file in your code editor.</li>
+							<li style="margin-bottom: 10px;">
+								Find the <code>$enable-rtl</code> variable and change its value to true:
+								<pre class="prettyprint linenums" style="margin: 10px 0;">$enable-rtl: true;
+</pre>
+								This will enable RTL mode for your application.
+							</li>
+						</ol>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="scssConfiguration"><strong>M) SCSS Configuration</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p><b>Global Variables</b></p>
+						<p>
+							The <code>/src/scss/default/_variables.scss</code> file contains the variables that control the styles of your application.
+						</p>
+						<p>
+							To edit these variables, navigate to the <code>/src/scss/default/_variables.scss</code> file in your code editor and modify the values of the variables to suit your needs.
+						</p>
+						<pre class="prettyprint linenums">&lt;!-- global variable --&gt;
+/src/scss/default/_variables.scss
+</pre>
+						<p><b>Dark Mode Variables</b></p>
+						<p>
+							The <code>/src/scss/default/_variables-dark.scss</code> file contains the variables that control the styles for dark mode. 
+							These variables are used in conjunction with the variables in the <code>/src/scss/default/_variables.scss</code> file to provide different values for light and dark modes.
+						</p>
+						<pre class="prettyprint linenums">&lt;!-- dark mode variable --&gt;
+/src/scss/default/_variables-dark.scss
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="bootstrap-components"><strong>N) Bootstrap Components</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>We have created the common re-usable <code>Panel</code> bootstrap component for this template. You may found the panel component via <code>/src/components/bootstrap/</code></p>
+<pre class="prettyprint linenums">
+//usage 
+&lt;Panel&gt;
+  &lt;PanelHeader&gt;...&lt;/PanelHeader&gt;
+  &lt;PanelBody&gt;...&lt;/PanelBody&gt;
+  &lt;PanelFooter&gt;...&lt;/PanelFooter&gt;
+&lt;/Panel&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="bootstrap-javascript"><strong>O) Bootstrap Javascript</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>You may use the default bootstrap data attribute like <code>data-bs-toggle="dropdown"</code> OR import the required modules from bootstrap.
+<pre class="prettyprint linenums">
+// usage example
+&lt;script&gt;
+  import { onMount } from 'svelte';
+  
+  onMount(async () => {
+    let bootstrap = await import('bootstrap');
+    new bootstrap.ScrollSpy(document.body, {
+      target: '#sidebar-bootstrap',
+      offset: 200
+    });
+  });
+&lt;/script&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="npm-package"><strong>P) NPM Package</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Below is the list of package that has been installed in this project. You may use the following example to find the package from their official website.
+							<code>https://www.npmjs.com/package/</code><code>bootstrap</code>
+						</p>
+<pre class="prettyprint linenums">
+{
+  "name": "color-admin",
+  "version": "5.5.2",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@iconify/svelte": "^5.0.0",
+    "@sveltejs/adapter-auto": "^6.0.1",
+    "@sveltejs/adapter-static": "^3.0.8",
+    "@sveltejs/kit": "^2.22.2",
+    "svelte": "^5.35.2",
+    "vite": "^6.3.5"
+  },
+  "type": "module",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@fullcalendar/bootstrap": "^6.1.18",
+    "@fullcalendar/common": "^5.11.5",
+    "@fullcalendar/core": "^6.1.18",
+    "@fullcalendar/daygrid": "^6.1.18",
+    "@fullcalendar/interaction": "^6.1.18",
+    "@fullcalendar/list": "^6.1.18",
+    "@fullcalendar/timegrid": "^6.1.18",
+    "@picmo/popup-picker": "^5.8.5",
+    "@tiptap/core": "^2.25.0",
+    "@tiptap/pm": "^2.25.0",
+    "@tiptap/starter-kit": "^2.25.0",
+    "apexcharts": "4.7",
+    "awesomplete": "^1.1.7",
+    "bootstrap": "^5.3.7",
+    "bootstrap-icons": "^1.13.1",
+    "bootstrap-social": "^5.1.1",
+    "chart.js": "^4.5.0",
+    "datatables.net-bs5": "^2.3.2",
+    "datatables.net-buttons": "^3.2.4",
+    "datatables.net-buttons-bs5": "^3.2.4",
+    "datatables.net-fixedcolumns": "^5.0.4",
+    "datatables.net-fixedcolumns-bs5": "^5.0.4",
+    "datatables.net-responsive": "^3.0.5",
+    "datatables.net-responsive-bs5": "^3.0.5",
+    "flag-icons": "^7.5.0",
+    "flatpickr": "^4.6.13",
+    "imask": "^7.6.1",
+    "jquery": "^3.7.1",
+    "jsvectormap": "^1.7.0",
+    "jszip": "^3.10.1",
+    "lity": "^2.4.1",
+    "masonry-layout": "^4.2.2",
+    "moment": "^2.30.1",
+    "pdfmake": "^0.2.20",
+    "perfect-scrollbar": "^1.5.6",
+    "photoswipe": "^5.4.4",
+    "quill": "^2.0.3",
+    "sass": "1.77.7",
+    "simple-line-icons": "^2.5.5",
+    "svelte-apexcharts": "^1.0.2",
+    "svelte-autocomplete": "^0.0.4",
+    "svelte-body": "^2.0.0",
+    "svelte-color-picker": "^1.0.7",
+    "svelte-highlight": "^7.8.3",
+    "svelte-select": "^5.8.3",
+    "svelte-tags-input": "^6.0.2"
+  }
+}
+</pre>
+					</div>
+				</div><!-- end row-fluid -->
+			</div><!-- end span12 -->
+		</div><!-- end row-fluid -->
+	</div><!-- end container -->
+	
+	<footer class="footer">
+		<div class="container text-left">
+			<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes, you might consider visiting the forums and inbox us your question via <a href="https://wrapbootstrap.com/user/seanngu/message">wrapbootstrap</a>.</p> 
+			<br />
+			<p class="append-bottom alt large"><strong>Sean Ngu</strong></p>
+			<p><a href="#top">Go To Table of Contents</a></p>
+		</div>
+	</footer><!-- end footer -->
+	
+	<script src="assets/bootstrap/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-transition.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-alert.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-modal.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-dropdown.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-scrollspy.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tab.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tooltip.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-popover.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-button.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-collapse.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-carousel.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-typeahead.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-affix.js"></script>
+
+	<script src="assets/bootstrap/js/holder/holder.js"></script>
+	<script src="assets/bootstrap/js/google-code-prettify/prettify.js"></script>
+	<script src="assets/bootstrap/js/application.js"></script>
+</body>
+</html>

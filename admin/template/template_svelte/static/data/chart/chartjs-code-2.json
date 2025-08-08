@@ -1,0 +1,42 @@
+<script>
+  import ChartJs from '/src/components/plugins/ChartJs.svelte';
+  import { onMount } from 'svelte';
+  import { appVariables } from '/src/stores/appVariables.js';
+  
+  let chartData = [];
+  
+  function getChartData(appVariables) {
+    return {
+      type: 'bar',
+      data: {
+        labels: ['Jan','Feb','Mar','Apr','May','Jun'],
+        datasets: [{
+          label: 'Total Visitors',
+          data: [37,31,36,34,43,31],
+          backgroundColor: 'rgba('+ appVariables.color.primaryRgb +', .5)',
+          borderColor: appVariables.color.primary,
+          borderWidth: 1.5
+        },{
+          label: 'New Visitors',
+          data: [12,16,20,14,23,21],
+          backgroundColor: 'rgba('+ appVariables.color.darkRgb +', .2)' +', .5)',
+          borderColor: 'rgba('+ appVariables.color.darkRgb +', .65)',
+          borderWidth: 1.5
+        }]
+      }
+    };
+  }
+  
+  onMount(async () => {
+    appVariables.subscribe(value => {
+      if (value.color) {
+        chartData = getChartData(value);
+      }
+    });
+  });
+</script>
+
+
+{#if chartData}
+  <ChartJs type={chartData.type} data={chartData.data}></ChartJs>
+{/if}

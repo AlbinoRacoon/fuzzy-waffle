@@ -1,0 +1,10 @@
+<script>
+  import Panel from '/src/components/bootstrap/Panel.svelte';
+  import PanelHeader from '/src/components/bootstrap/PanelHeader.svelte';
+  import PanelBody from '/src/components/bootstrap/PanelBody.svelte';
+</script>
+
+<Panel class="panel-inverse">
+  <PanelHeader>...</PanelHeader>
+  <PanelBody class="bg-gray-800 text-white">...</PanelBody>
+</Panel>

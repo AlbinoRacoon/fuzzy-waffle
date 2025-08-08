@@ -1,0 +1,19 @@
+<script>
+  import { onMount } from 'svelte';
+  import 'quill/dist/quill.core.css';
+  import 'quill/dist/quill.snow.css';
+  
+  onMount(async () => {
+    let quill = await import('quill');
+    new quill.default('#quillEditor', {
+      theme: 'snow'
+    });
+  });
+</script>
+
+<!-- html -->
+<div id="quillEditor">
+  <p>Hello World!</p>
+  <p>Some initial <strong>bold</strong> text</p>
+  <p><br></p>
+</div>

@@ -1,0 +1,45 @@
+{
+  "resources/js/app.js": {
+    "file": "assets/app-DGrNBsEh.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/scss/default/images/bg-login-dark-mode.png": {
+    "file": "assets/bg-login-dark-mode-Cu9y___7.png",
+    "src": "resources/scss/default/images/bg-login-dark-mode.png"
+  },
+  "resources/scss/default/images/bg-login.png": {
+    "file": "assets/bg-login-Cv_wtOh0.png",
+    "src": "resources/scss/default/images/bg-login.png"
+  },
+  "resources/scss/default/images/coming-soon.jpg": {
+    "file": "assets/coming-soon-D1OkGxy5.jpg",
+    "src": "resources/scss/default/images/coming-soon.jpg"
+  },
+  "resources/scss/default/images/cover-pattern.png": {
+    "file": "assets/cover-pattern-aPGoMYev.png",
+    "src": "resources/scss/default/images/cover-pattern.png"
+  },
+  "resources/scss/default/images/cover-sidebar-user.jpg": {
+    "file": "assets/cover-sidebar-user-r8tKRQUv.jpg",
+    "src": "resources/scss/default/images/cover-sidebar-user.jpg"
+  },
+  "resources/scss/default/images/cover-sidebar.jpg": {
+    "file": "assets/cover-sidebar-DshyVW1h.jpg",
+    "src": "resources/scss/default/images/cover-sidebar.jpg"
+  },
+  "resources/scss/default/images/error-page-pattern.png": {
+    "file": "assets/error-page-pattern-CvK8bDV8.png",
+    "src": "resources/scss/default/images/error-page-pattern.png"
+  },
+  "resources/scss/default/images/profile-cover.jpg": {
+    "file": "assets/profile-cover-DAGN_a7z.jpg",
+    "src": "resources/scss/default/images/profile-cover.jpg"
+  },
+  "resources/scss/default/styles.scss": {
+    "file": "assets/styles-BR-8UHDU.css",
+    "src": "resources/scss/default/styles.scss",
+    "isEntry": true
+  }
+}

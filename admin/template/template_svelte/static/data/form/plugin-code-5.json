@@ -1,0 +1,13 @@
+<script>
+  import { onMount } from 'svelte';
+  import Tags from 'svelte-tags-input';
+	
+  let tagsInputAutocomplete;
+  
+  onMount(async () => {
+    tagsInputAutocomplete = ['javascript', 'css', 'html'];
+  });
+</script>
+
+<!-- html -->
+<Tags autoComplete={tagsInputAutocomplete} />

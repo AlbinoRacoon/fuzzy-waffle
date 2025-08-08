@@ -1,0 +1,25 @@
+<script>
+  import Card from '/src/components/bootstrap/Card.svelte';
+  import CardBody from '/src/components/bootstrap/CardBody.svelte';
+  import CardImgOverlay from '/src/components/bootstrap/CardImgOverlay.svelte';
+</script>
+
+<!-- image caps -->
+<Card class="mb-3">
+  <CardBody>
+    <img src="https://via.placeholder.com/600x400/c9d2e3/212837" alt="" class="card-img-top">
+  </CardBody>
+  <CardBody>
+    <h5 class="card-title">...</h5>
+    <p class="card-text">...</p>
+  </CardBody>
+</Card>
+
+<!-- image overlay -->
+<Card class="p-3">
+  <img src="https://via.placeholder.com/600x750/000000/ffffff" alt="" class="card-img">
+  <CardImgOverlay>
+    <h5 class="card-title">...</h5>
+    <p class="card-text">...</p>
+  </CardImgOverlay>
+</Card>

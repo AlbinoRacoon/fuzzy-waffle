@@ -1,0 +1,14 @@
+<script>
+  import Card from '/src/components/bootstrap/Card.svelte';
+</script>
+
+<!-- html -->
+<div class="row row-cols-1 row-cols-md-2 g-3">
+  <div class="col">
+    <Card class="h-100">...</Card>
+  </div>
+  <div class="col">
+    <Card class="h-100">...</Card>
+  </div>
+  ...
+</div>

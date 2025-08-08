@@ -1,0 +1,13 @@
+<script>
+  import Card from '/src/components/bootstrap/Card.svelte';
+  import CardHeader from '/src/components/bootstrap/CardHeader.svelte';
+  import CardExpandToggler from '/src/components/bootstrap/CardExpandToggler.svelte';
+</script>
+
+<!-- html -->
+<Card>
+  <CardHeader class="fw-bold small d-flex">
+    <span class="flex-grow-1">...</span>
+    <CardExpandToggler></CardExpandToggler>
+  </CardHeader>
+</Card>

@@ -1,0 +1,15 @@
+<script>
+  import IMask from 'imask';
+  
+  let maskedInput;
+  let maskedInputElm;
+  
+  onMount(async () => {
+    maskedInput = IMask(maskedInputElm, {
+      mask: '(000)000-0000'
+    });
+  });
+</script>
+
+<!-- html -->
+<input class="form-control" bind:this={maskedInputElm} placeholder="(999) 999-9999" />

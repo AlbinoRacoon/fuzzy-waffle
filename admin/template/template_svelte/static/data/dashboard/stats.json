@@ -1,0 +1,35 @@
+[{ 
+	title: 'SITE VISITORS', total: '4.2m', 
+	info: [ { icon: 'fa fa-chevron-up fa-fw me-1', text: '33.3% more than last week' }, { icon: 'far fa-user fa-fw me-1', text: '45.5% new visitors' }, { icon: 'far fa-times-circle fa-fw me-1', text: '3.25% bounce rate'} ],
+	chart: {
+		height: 30,
+		options: { chart: { type: 'bar', sparkline: { enabled: true } }, colors: [appVariable.color.appTheme], plotOptions: { bar: { horizontal: false, columnWidth: '65%',	endingShape: 'rounded' } } },
+		series: [{ name: 'Visitors', data: [this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo()] }]
+	}
+},
+{ 
+	title: 'STORE SALES', total: '$35.2K',
+	info: [ { icon: 'fa fa-chevron-up fa-fw me-1', text: '20.4% more than last week' }, { icon: 'fa fa-shopping-bag fa-fw me-1', text: '33.5% new orders' }, { icon: 'fa fa-dollar-sign fa-fw me-1', text: '6.21% conversion rate'} ],
+	chart: {
+		height: 30,
+		options: { chart: { type: 'line', sparkline: { enabled: true } }, colors: [appVariable.color.appTheme], stroke: { curve: 'straight', width: 2 } },
+		series: [{ name: 'Visitors', data: [this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo()] }]
+	}
+},
+{ title: 'NEW MEMBERS', total: '4,490',
+	info: [ { icon: 'fa fa-chevron-up fa-fw me-1', text: '59.5% more than last week' }, { icon: 'fab fa-facebook-f fa-fw me-1', text: '45.5% from facebook' }, { icon: 'fab fa-youtube fa-fw me-1', text: '15.25% from youtube'} ],
+	chart: {
+		height: 45,
+		options: { chart: { type: 'pie', sparkline: { enabled: true } }, colors: ['rgba('+ appVariable.color.appThemeRgb + ', 1)', 'rgba('+ appVariable.color.appThemeRgb + ', .75)', 'rgba('+ appVariable.color.appThemeRgb + ', .5)'], stroke: { show: false } },
+		series: [this.randomNo(), this.randomNo(), this.randomNo()]
+	}
+},
+{
+	title: 'BANDWIDTH', total: '4.5TB',
+	info: [ { icon: 'fa fa-chevron-up fa-fw me-1', text: '5.3% more than last week' }, { icon: 'far fa-hdd fa-fw me-1', text: '10.5% from total usage' }, { icon: 'far fa-hand-point-up fa-fw me-1', text: '2MB per visit'} ],
+	chart: {
+		height: 45,
+		options: { chart: { type: 'donut', sparkline: { enabled: true } }, colors: ['rgba('+ appVariable.color.appThemeRgb + ', .15)', 'rgba('+ appVariable.color.appThemeRgb + ', .35)', 'rgba('+ appVariable.color.appThemeRgb + ', .55)', 'rgba('+ appVariable.color.appThemeRgb + ', .75)', 'rgba('+ appVariable.color.appThemeRgb + ', .95)'], stroke: { show: false, curve: 'smooth', lineCap: 'butt', colors: 'rgba(' + appVariable.color.blackRgb + ', .25)', width: 2, dashArray: 0 }, plotOptions: { pie: { donut: { background: 'transparent' } } } },
+		series: [this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo(), this.randomNo()]
+	}
+}]

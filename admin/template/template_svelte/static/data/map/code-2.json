@@ -1,0 +1,29 @@
+<script>
+  import { onMount, onDestroy } from 'svelte';
+  
+  let googleMap;
+  
+  onMount(async () => {
+    window.initMap = initMap;
+
+    function initMap() {
+      googleMap = new window.google.maps.Map(document.getElementById('googleMapContainer'), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8,
+      });
+    }
+    
+    const googleMapsScript = document.createElement('script');
+    googleMapsScript.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
+    googleMapsScript.async = true;
+    googleMapsScript.defer = true;
+    document.head.appendChild(googleMapsScript);
+  });
+  
+  onDestroy(() => {
+    googleMap = null;
+  });
+</script>
+
+<!-- html -->
+<div id="googleMapContainer" class="h-300px"></div>

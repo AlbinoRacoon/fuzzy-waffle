@@ -1,0 +1,14 @@
+<script>
+  import { onMount, onDestroy } from 'svelte';
+  import { appOptions } from '../../../stores/appOptions.js';
+  
+  onMount(async () => {
+    $appOptions.appTopMenu = true;
+    $appOptions.appBoxedLayout = true;
+  });
+  
+  onDestroy(() => {
+    $appOptions.appTopMenu = false;
+    $appOptions.appBoxedLayout = false;
+  });
+</script>

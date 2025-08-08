@@ -1,0 +1,6 @@
+<script>
+  import Icon from '@iconify/svelte';
+</script>
+
+<!-- html -->
+<Icon icon="solar:4k-bold-duotone" />

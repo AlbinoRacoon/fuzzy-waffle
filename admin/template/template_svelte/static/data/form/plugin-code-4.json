@@ -1,0 +1,19 @@
+<script>
+  import { onMount } from 'svelte';
+  import Awesomplete from 'awesomplete';
+  
+  let typeahead;
+  
+  onMount(async () => {
+    typeahead = new Awesomplete(document.getElementById('typeaheadInput'), {
+      list: ['One','Two','Three'],
+      minChars: 1,
+      maxItems: 5,
+      autoFirst: true
+    });
+  });
+</script>
+
+<!-- html -->
+<input type="text" id="typeaheadInput" name="typeaheadInput" class="form-control" placeholder="Type to search" />
+                        

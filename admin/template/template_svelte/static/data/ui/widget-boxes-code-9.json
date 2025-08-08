@@ -1,0 +1,24 @@
+<script>
+  import Panel from '/src/components/bootstrap/Panel.svelte';
+  import PanelHeader from '/src/components/bootstrap/PanelHeader.svelte';
+  import PanelToolbar from '/src/components/bootstrap/PanelToolbar.svelte';
+  import PanelBody from '/src/components/bootstrap/PanelBody.svelte';
+  import PanelFooter from '/src/components/bootstrap/PanelFooter.svelte';
+</script>
+
+<Panel class="panel-inverse">
+  <PanelHeader>...</PanelHeader>
+  <PanelToolbar>
+    <div class="btn-group me-5px">
+      ...
+    </div>
+    <div class="btn-group">
+      ...
+    </div>
+  </PanelToolbar>
+  <textarea class="form-control no-rounded-pill border-1 border-start-0 border-end-0 border-bottom-0 rounded-0 bg-light" rows="5">...</textarea>
+  <PanelFooter class="text-end">
+    <a href="#" class="btn btn-white btn-sm">Cancel</a>
+    <a href="#" class="btn btn-primary btn-sm ms-5px">Action</a>
+  </PanelFooter>
+</Panel>

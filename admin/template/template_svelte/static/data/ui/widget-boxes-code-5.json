@@ -1,0 +1,14 @@
+<script>
+  import Panel from '/src/components/bootstrap/Panel.svelte';
+  import PanelHeader from '/src/components/bootstrap/PanelHeader.svelte';
+  import PanelTitle from '/src/components/bootstrap/PanelTitle.svelte';
+</script>
+
+<Panel>
+  <PanelHeader>
+    <PanelTitle>
+      Panel Header with Badge
+      <span class="badge bg-success ms-1">NEW</span> 
+    </PanelTitle>
+  </PanelHeader>
+</Panel>

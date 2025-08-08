@@ -1,0 +1,16 @@
+<script>
+  import { onMount, onDestroy } from 'svelte';
+  import { appOptions } from '/src/stores/appOptions.js';
+  
+  onMount(async () => {
+    import('flag-icons/css/flag-icons.min.css');
+    $appOptions.appHeaderLanguageBar = true;
+  });
+  
+  onDestroy(() => {
+    $appOptions.appHeaderLanguageBar = false;
+  });
+</script>
+
+<!-- html -->
+<div class="fi fi-ad" title="ad"></div>

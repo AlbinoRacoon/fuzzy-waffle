@@ -1,0 +1,15 @@
+<script>
+  import Panel from '/src/components/bootstrap/Panel.svelte';
+  import PanelHeader from '/src/components/bootstrap/PanelHeader.svelte';
+  import PanelBody from '/src/components/bootstrap/PanelBody.svelte';
+  import PerfectScrollbar from '/src/components/plugins/PerfectScrollbar.svelte';
+</script>
+
+<Panel class="panel-inverse">
+  <PanelHeader>...</PanelHeader>
+  <PanelBody>
+    <PerfectScrollbar class="h-300px">
+      ...
+    </PerfectScrollbar>
+  </PanelBody>
+</Panel>

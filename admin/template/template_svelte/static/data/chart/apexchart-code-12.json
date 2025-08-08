@@ -1,0 +1,58 @@
+<script>
+  import ApexCharts from '/src/components/plugins/ApexCharts.svelte';
+  import { onMount } from 'svelte';
+  import { appVariables } from '/src/stores/appVariables.js';
+  
+  let chartData = [];
+  
+  function getChartData(appVariables) {
+    return {
+      options: {
+        chart: { height: 320, type: 'radar' },
+        series: [{
+          name: 'Series 1',
+          data: [20, 100, 40, 30, 50, 80, 33],
+        }],
+        labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        plotOptions: {
+          radar: {
+            size: 140,
+            polygons: {
+              strokeColors: 'rgba('+ appVariables.color.darkRgb +', .25)',
+              strokeWidth: 1,
+              connectorColors: 'rgba('+ appVariables.color.darkRgb +', .25)',
+              fill: {
+                colors: ['rgba('+appVariables.color.gray300Rgb +', .25)', 'rgba('+ appVariables.color.darkRgb + ', .25)']
+              }
+            }
+          }
+        },
+        title: { text: 'Radar with Polygon Fill' },
+        colors: [appVariables.color.primary],
+        markers: {
+          size: 4,
+          colors: [appVariables.color.primary],
+          strokeColor: appVariables.color.primary,
+          strokeWidth: 2,
+        },
+        tooltip: { y: { formatter: function(val) { return val } } },
+        yaxis: {
+          tickAmount: 7,
+          labels: { formatter: function(val, i) { return (i % 2 === 0) ? val : ''; } }
+        }
+      }
+    };
+  }
+
+  onMount(async () => {
+    appVariables.subscribe(value => {
+      if (value.color) {
+        chartData = getChartData(value);
+      }
+    });
+  });
+</script>
+
+{#if chartData}
+  <ApexCharts options={chartData.options}></ApexCharts>
+{/if}

@@ -1,0 +1,21 @@
+<script>
+  import Panel from '/src/components/bootstrap/Panel.svelte';
+  import PanelHeader from '/src/components/bootstrap/PanelHeader.svelte';
+  import PanelTitle from '/src/components/bootstrap/PanelTitle.svelte';
+</script>
+
+<Panel>
+  <PanelHeader>
+    <PanelTitle>Panel Header with Dropdown</PanelTitle>
+    <div class="btn-group my-n1">
+      <button type="button" class="btn btn-success btn-xs">Action</button>
+      <button type="button" class="btn btn-success btn-xs dropdown-toggle" data-bs-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <div class="dropdown-menu dropdown-menu-end">
+        <a href="#/" class="dropdown-item">Action</a>
+        ...
+      </div>
+    </div>
+  </PanelHeader>
+</Panel>

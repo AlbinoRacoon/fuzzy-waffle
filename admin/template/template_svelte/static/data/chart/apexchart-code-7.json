@@ -1,0 +1,39 @@
+<script>
+  import ApexCharts from '/src/components/plugins/ApexCharts.svelte';
+  import { onMount } from 'svelte';
+  import { appVariables } from '/src/stores/appVariables.js';
+  
+  let chartData = [];
+  
+  function getChartData(appVariables) {
+    return {
+      options: {
+        chart: { height: 350, type: 'bubble' },
+        series: [
+          { name: 'Bubble1', data: generateBubbleChartData(new Date('11 Feb 2022 GMT').getTime(), 20, { min: 10, max: 60 }) },
+          { name: 'Bubble2', data: generateBubbleChartData(new Date('11 Feb 2022 GMT').getTime(), 20, { min: 10, max: 60 }) },
+          { name: 'Bubble3', data: generateBubbleChartData(new Date('11 Feb 2022 GMT').getTime(), 20, { min: 10, max: 60 }) },
+          { name: 'Bubble4', data: generateBubbleChartData(new Date('11 Feb 2022 GMT').getTime(), 20, { min: 10, max: 60 }) }
+        ],
+        dataLabels: { enabled: false },
+        colors: [appVariables.color.primary, appVariables.color.warning, 'rgba('+ appVariables.color.darkRgb + ', .5)', appVariables.color.pink],
+        fill: { opacity: 0.8 },
+        title: { text: 'Simple Bubble Chart' },
+        xaxis: { tickAmount: 12, type: 'category' },
+        yaxis: { max: 70 }
+      }
+    };
+  }
+
+  onMount(async () => {
+    appVariables.subscribe(value => {
+      if (value.color) {
+        chartData = getChartData(value);
+      }
+    });
+  });
+</script>
+
+{#if chartData}
+  <ApexCharts options={chartData.options}></ApexCharts>
+{/if}

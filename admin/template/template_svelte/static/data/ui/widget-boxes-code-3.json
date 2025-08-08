@@ -1,0 +1,18 @@
+<script>
+  import Panel from '/src/components/bootstrap/Panel.svelte';
+  import PanelHeader from '/src/components/bootstrap/PanelHeader.svelte';
+  import PanelTitle from '/src/components/bootstrap/PanelTitle.svelte';
+</script>
+
+<Panel>
+  <PanelHeader>
+    <PanelTitle>Panel Header with Radio Button</PanelTitle>
+    <div class="btn-group btn-group-toggle my-n1" data-toggle="buttons">
+      <input type="radio" name="options" class="btn-check" id="option1" checked />
+      <label class="btn btn-success btn-xs" for="option1">Option 1</label>
+      
+      <input type="radio" name="options" class="btn-check" id="option2" />
+      <label class="btn btn-success btn-xs" for="option2">Option 2</label>
+    </div>
+  </PanelHeader>
+</Panel>

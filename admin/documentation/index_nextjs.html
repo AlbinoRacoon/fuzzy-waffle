@@ -1,0 +1,872 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title> Documentation - Color Admin</title>
+	<!-- Bootstrap styles -->
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/docs.css" rel="stylesheet">
+	<link href="assets/bootstrap/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+	<div class="navbar navbar-inverse navbar-page">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="index.html">Documentation</a>
+				
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="">
+							<a href="index.html">HTML</a>
+						</li>
+						<li class="">
+							<a href="index_ajax.html">Ajax</a>
+						</li>
+						<li class="">
+							<a href="index_angular_1x.html">Angular 1.x</a>
+						</li>
+						<li class="">
+							<a href="index_angular_20.html">Angular 20</a>
+						</li>
+						<li class="">
+							<a href="index_laravel.html">Laravel 12</a>
+						</li>
+						<li class="">
+							<a href="index_vue.html">Vue 3</a>
+						</li>
+						<li class="">
+							<a href="index_react.html">React 19</a>
+						</li>
+						<li class="">
+							<a href="index_asp.html">ASP.NET</a>
+						</li>
+						<li class="">
+							<a href="index_django.html">Django</a>
+						</li>
+						<li class="">
+							<a href="index_svelte.html">Svelte</a>
+						</li>
+						<li class="active">
+							<a href="index_nextjs.html">NextJS</a>
+						</li>
+						</ul>
+					<ul class="nav pull-right">
+						<li class="">
+							<a href="index_change_log.html">Change Log</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1 class="text-center">Color Admin</h1>
+			<p class="lead text-center">&ldquo;NextJS 15 Version&rdquo; Documentation by &ldquo;Sean Ngu&rdquo; v5.5.2</p>
+		</div>
+		<div class="jumbotron-cover"></div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="well with-cover clearfix">
+					<div class="well-cover" style="background-image: url(assets/images/nextjs.jpg); background-size: auto 80%; background-position: center; background-repeat: no-repeat; background-color: #fff;"><span style="position: absolute; bottom: 25px; right: 60px; font-weight: bold;">15.x</span></div>
+					<p>
+						<strong>
+							Updated on: 08/July/2025<br>
+							By: Sean Ngu<br>
+						</strong>
+					</p>
+					<p style="margin: 0;">
+						If you have any inquiries or require further assistance beyond what is covered in this help file,
+						please do not hesitate to send us a <a href="https://wrapbootstrap.com/user/seanngu/message" target="_blank">message</a>
+						through Wrapbootstrap. We are more than happy to help. <br /><br />Thank you very much!
+					</p>
+				</div>
+			</div><!-- end span12 -->
+		</div><!-- end row -->
+		<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<li><a href="#installation"><i class="icon-chevron-right"></i>Installation</a></li>
+					<li><a href="#fileStructure"><i class="icon-chevron-right"></i>File Structure</a></li>
+					<li><a href="#page-structure"><i class="icon-chevron-right"></i>Page Structure</a></li>
+					<li><a href="#page-components"><i class="icon-chevron-right"></i>Components</a></li>
+					<li><a href="#page-config"><i class="icon-chevron-right"></i>Page Config</a></li>
+					<li><a href="#page-menu"><i class="icon-chevron-right"></i>Page Menu</a></li>
+					<li><a href="#theme-color"><i class="icon-chevron-right"></i>Theme Color</a></li>
+					<li><a href="#page-dark-mode"><i class="icon-chevron-right"></i>Dark Mode <span class="label">NEW</span></a></li>
+					<li><a href="#page-rtl-mode"><i class="icon-chevron-right"></i>RTL Mode <span class="label">NEW</span></a></li>
+					<li><a href="#page-switch-design"><i class="icon-chevron-right"></i>Switch Design <span class="label">NEW</span></a></li>
+					<li><a href="#page-scss"><i class="icon-chevron-right"></i>SCSS</a></li>
+					<li><a href="#npm-package"><i class="icon-chevron-right"></i>NPM Package</a></li>
+				</ul>
+			</div>
+			<div class="span9">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="installation"><strong>A) Installation</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Follow the following step to install the Next.js in your localhost<br />
+							You may refer to their official documentation for how to setup the node js & npm. <br />
+							<a href="https://www.npmjs.com/get-npm" target="_blank">Setup Guide</a>
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- run the following command --&gt;
+cd /your-path-url/template_nextjs
+npm install
+
+&lt;!-- Start the development server --&gt;
+npm run dev
+
+&lt;!-- Build the project --&gt;
+npm run build
+
+
+&lt;!-- browse the url --&gt;
+http://localhost:3000/
+</pre>
+						<p>
+							Verify that you are running at least node <code>22.x.x</code> or later and <code>npm 11.x.x</code> by running <code>node -v</code> and <code>npm -v</code> in a terminal/console window. Older versions produce errors, but newer versions are fine.
+						</p>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="fileStructure"><strong>B) File Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>File structure overview for Next.js Version</p>
+						
+<pre class="prettyprint linenums">
+template_nextjs/
+├── eslint.config.mjs        # ESLint configuration
+├── next-env.d.ts            # Next.js TypeScript environment declaration
+├── next.config.ts           # Next.js configuration file
+├── package.json             # Project dependencies and scripts
+├── README.md                # Project documentation
+├── tsconfig.json            # TypeScript configuration
+├── public/                  # Public assets (e.g., images, fonts)
+└── src/                     # Source code
+    ├── global.d.ts          # Global TypeScript declarations
+    ├── app/                 # Next.js app directory (e.g., routing, pages)
+    ├── components/          # Reusable UI components
+    ├── composables/         # Custom hooks or composable utilities
+    ├── config/              # Global application configurations
+    ├── styles/              # HUD scss styles
+    └── utils/               # Utility functions
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-structure"><strong>C) Page Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Below is the code from <code>/app/layout.tsx</code> which include the header, sidebar, content, footer and theme panel. You may remove the component if you are not using it.</p>
+<pre class="prettyprint linenums">
+'use client';
+
+// css
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import '@fortawesome/fontawesome-free/css/all.css';
+import 'react-perfect-scrollbar/dist/css/styles.css';
+import '@/styles/nextjs.scss';
+
+import { useEffect, useCallback } from 'react';
+import Header from '@/components/header/header';
+import TopMenu from '@/components/top-menu/top-menu';
+import Sidebar from '@/components/sidebar/sidebar';
+import SidebarRight from '@/components/sidebar-right/sidebar-right';
+import ThemePanel from '@/components/theme-panel/theme-panel';
+import { AppSettingsProvider, useAppSettings } from '@/config/app-settings';
+import { Open_Sans } from 'next/font/google';
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '600', '700'],
+  display: 'swap'
+});
+
+function Layout({ children }: { children: React.ReactNode }) {
+  const { settings } = useAppSettings();
+  
+  const handleScroll = useCallback(() =&gt; {
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      const totalScroll = window.scrollY;
+      const elm = document.querySelector('.app');
+      
+      if (elm) {
+        if (totalScroll &gt; 0) {
+          elm.classList.add('has-scroll');
+        } else {
+          elm.classList.remove('has-scroll');
+        }
+      }
+    }
+  }, []);
+  
+  useEffect(() =&gt; {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+    }
+
+    return () =&gt; {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [handleScroll]);
+
+  return (
+    &lt;div className={
+      'app ' +
+      (settings.appClass ? settings.appClass + ' ' : '') + 
+      (settings.appBoxedLayout ? 'app-boxed-layout ' : '') + 
+      (settings.appContentFullHeight ? 'app-content-full-height ' : '') + 
+      (settings.appHeaderNone ? 'app-without-header ' : '') +  
+      (settings.appHeaderFixed && !settings.appHeaderNone ? 'app-header-fixed ' : '') + 
+      (settings.appSidebarWide ? 'app-with-wide-sidebar ' : '') + 
+      (settings.appSidebarTwo ? 'app-with-two-sidebar ' : '') + 
+      (settings.appSidebarEnd ? 'app-with-end-sidebar ' : '') + 
+      (settings.appSidebarHover ? 'app-with-hover-sidebar ' : '') + 
+      (settings.appSidebarEndToggled ? 'app-sidebar-end-toggled ' : '') + 
+      (settings.appSidebarEndMobileToggled ? 'app-sidebar-end-mobile-toggled ' : '') + 
+      (settings.appSidebarNone ? 'app-without-sidebar ' : '') + 
+      (settings.appSidebarFixed ? 'app-sidebar-fixed ' : '') + 
+      (settings.appSidebarMinified ? 'app-sidebar-minified ' : '') + 
+      (settings.appSidebarMobileToggled ? 'app-sidebar-mobile-toggled' : '') +
+      (settings.appFooter ? 'app-footer-fixed ' : '') + 
+      (settings.appTopMenu ? 'app-with-top-menu ' : '') + 
+      (settings.appGradientEnabled ? 'app-gradient-enabled ' : '')
+    }&gt;
+      {settings.appTopMenu && (&lt;TopMenu /&gt;)}
+      {!settings.appHeaderNone && (&lt;Header /&gt;)}
+      {!settings.appSidebarNone && (&lt;Sidebar /&gt;)}
+      {!settings.appContentNone && (&lt;div className={'app-content '+ settings.appContentClass }&gt;{children}&lt;/div&gt;)}
+      {settings.appSidebarTwo && (&lt;SidebarRight /&gt;)}
+      {settings.appContentNone && (&lt;&gt;{children}&lt;/&gt;)}
+      &lt;ThemePanel /&gt;
+    &lt;/div&gt;
+  );
+}
+
+
+export default function RootLayout({ children }: Readonly&lt;{ children: React.ReactNode; }&gt;) {
+  useEffect(() =&gt; {
+    let isMounted = true;
+
+    const loadBootstrap = async () =&gt; {
+      try {
+        const bootstrap = await import('bootstrap');
+        if (isMounted) {
+          window.bootstrap = bootstrap;
+        }
+      } catch (error) {
+        console.error('Error loading Bootstrap:', error);
+      }
+    };
+  
+    if (typeof window !== 'undefined') {
+      loadBootstrap();
+    }
+  
+    return () =&gt; {
+      isMounted = false;
+    };
+  }, []);
+  
+  return (
+    &lt;html lang="en" className={openSans.className}&gt;
+      &lt;head&gt;
+        &lt;title&gt;Color Admin | Nextjs Version&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;AppSettingsProvider&gt;
+          &lt;Layout&gt;{children}&lt;/Layout&gt;
+        &lt;/AppSettingsProvider&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  );
+}
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-components"><strong>D) Components</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>List of components inside the components folder</p>
+<pre class="prettyprint linenums">
+components/
+├── card/
+├── content/
+├── footer/
+├── header/
+├── nav-scroll-to/
+├── panel/
+├── sidebar/
+├── sidebar-right/
+├── theme-panel/
+└── top-menu/
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-config"><strong>E) Page Config</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Example of how to change page options in single page</p>
+<pre class="prettyprint linenums">
+'use client';
+
+import { useEffect } from 'react';
+import { useAppSettings } from '@/config/app-settings';
+
+export default function LayoutFullWidth() {
+  const { updateSettings } = useAppSettings();
+  
+  useEffect(() => {
+    updateSettings({ appSidebarNone: true });
+    
+    return function cleanUp() {
+      updateSettings({ appSidebarNone: false });
+    }
+    // eslint-disable-next-line
+  }, []);
+  return (
+    &lt;&gt;
+    &lt;/&gt;
+  )
+}
+</pre>
+						<p>List of default options can be set in <code>/config/app-settings.tsx</code>:</p>
+<pre class="prettyprint linenums">
+const defaultSettings: AppSettings = {
+  appTheme: '',
+  appClass: '',
+  appBoxedLayout: false,
+  appContentClass: '',
+  appContentFullHeight: false,
+  appContentNone: false,
+  appHeaderNone: false,
+  appHeaderFixed: true,
+  appHeaderInverse: false,
+  appHeaderMegaMenu: false,
+  appHeaderLanguageBar: false,
+  appSidebarWide: false,
+  appSidebarTwo: false,
+  appSidebarHover: false,
+  appSidebarEnd: false,
+  appSidebarEndToggled: false,
+  appSidebarEndMobileToggled: false,
+  appSidebarSearch: false,
+  appSidebarFixed: true,
+  appSidebarGrid: false,
+  appSidebarNone: false,
+  appSidebarMobileToggled: false,
+  appSidebarMinified: false,
+  appSidebarInverse: true,
+  appSidebarLight: false,
+  appSidebarTransparent: false,
+  appFooter: false,
+  appTopMenu: false,
+  appTopMenuMobileToggled: false,
+  appGradientEnabled: false
+};
+</pre>
+						<p>List of options can be used in single page:</p>
+<pre class="prettyprint linenums">
+updateSettings({
+  appTheme: '',
+  appClass: '',
+  appBoxedLayout: false,
+  appContentClass: '',
+  appContentFullHeight: false,
+  appContentNone: false,
+  appHeaderNone: false,
+  appHeaderFixed: true,
+  appHeaderInverse: false,
+  appHeaderMegaMenu: false,
+  appHeaderLanguageBar: false,
+  appSidebarWide: false,
+  appSidebarTwo: false,
+  appSidebarHover: false,
+  appSidebarEnd: false,
+  appSidebarEndToggled: false,
+  appSidebarEndMobileToggled: false,
+  appSidebarSearch: false,
+  appSidebarFixed: true,
+  appSidebarGrid: false,
+  appSidebarNone: false,
+  appSidebarMobileToggled: false,
+  appSidebarMinified: false,
+  appSidebarInverse: true,
+  appSidebarLight: false,
+  appSidebarTransparent: false,
+  appFooter: false,
+  appTopMenu: false,
+  appTopMenuMobileToggled: false,
+  appGradientEnabled: false
+});
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-menu"><strong>F) Page Menu</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>File to configure the page sidebar menu</p>
+<pre class="prettyprint linenums">
+config/
+└── app-menu.tsx
+</pre>
+						<p>Below is the sidebar structures with two level support</p>
+<pre class="prettyprint linenums">
+const Menu = [
+  { is_header: true, title: 'Navigation' },
+  { path: '/email', icon: 'fa fa-hdd', title: 'Email',
+    children: [
+      { path: '/email/inbox', title: 'Inbox' }, 
+      { path: '/email/compose', title: 'Compose' }, 
+      { path: '/email/detail', title: 'Detail' }
+    ]
+  }
+];
+
+export default Menu;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="theme-color"><strong>G) Theme Color</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							The default theme color is set to the <code>teal</code> color. You may change it from <code>/src/styles/default/_variables.scss</code>
+						</p>
+<pre class="prettyprint linenums">
+// LINE 114
+$theme:        $teal !default;
+</pre>
+						<p>
+							Besides that, you can also set the theme color by adding the css class <code>theme-{ color-name }</code> to <code>/src/app/layout.tsx</code>
+						</p>
+<pre class="prettyprint linenums">
+// LINE 107
+&lt;body className="theme-blue"&gt;
+</pre>
+						<div class="alert alert-info">
+							<b>***IMPORTANT***</b><br />
+
+							You might need to remove the <code>&lt;ThemePanel /&gt;</code> component from <code>/src/app/layout.tsx</code>.<br /><br />
+							This is because app-theme-panel will store a <b>localStorage</b> variable and append the theme class automatically when page load
+							if you have select any theme color before from theme panel.
+						</div>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-dark-mode"><strong>H) Dark Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Enable dark mode from <code>template_nextjs/src/app/layout.tsx</code>.</p>
+<pre class="prettyprint linenums">
+...
+&lt;html lang="en" data-bs-theme="dark"&gt;   // LINE 103
+...
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-rtl-mode"><strong>I) RTL Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Add the <code>dir="rtl"</code> attribute to <code>&lt;html&gt;</code> for <code>template_nextjs/src/app/layout.tsx</code> in order to enable Right-To-Left (RTL) layout direction.</p>
+<pre class="prettyprint linenums">
+&lt;html lang="en" dir="rtl"&gt;
+</pre>
+						<p>This will flip the layout direction of the entire page to support RTL languages like Arabic, Hebrew, or Persian.</p>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-switch-design"><strong>J) Switch Design</strong> - <a href="#top">top</a></h3>
+						</div>
+						<h4 style="margin-bottom: 15px">Apple Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the variable from <code>template_nextjs/src/styles/nextjs.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'apple/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px;">Add the following script to <code>template_nextjs/src/app/layout.tsx</code>.</div>							
+<pre class="prettyprint linenums">
+&lt;script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"&gt;&lt;/script&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Ionicons and background color class is needed as well.</div>
+<pre class="prettyprint linenums">
+&lt;div className="menu-icon"&gt;
+  &lt;ion-icon name="pulse-outline" className="bg-gradient-blue"&gt;&lt;/ion-icon&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Facebook Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the variable from <code>template_nextjs/src/styles/nextjs.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'facebook/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the following variable from <code>template_nextjs/src/config/app-settings.tsx</code>.</div>
+<pre class="prettyprint linenums">
+...
+appHeaderInverse: true,   // LINE 50
+...
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Transparent Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the variable from <code>template_nextjs/src/styles/nextjs.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'transparent/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the <code>.app-cover</code> next to the <code>&lt;body&gt;</code> tag in <code>template_react/src/app/layout.tsx</code>.</div>
+<pre class="prettyprint linenums">
+&lt;body&gt;
+  &lt;!-- BEGIN page-cover --&gt;
+  &lt;div className="app-cover"&gt;&lt;/div&gt;
+  &lt;!-- END page-cover --&gt;
+  
+  ...
+&lt;/body&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Google Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the variable from <code>template_nextjs/src/styles/nextjs.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'google/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Material Icons.</div>
+<pre class="prettyprint linenums">
+&lt;div className="menu-icon"&gt;
+  &lt;i className="material-icons"&gt;home&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the following variable from <code>template_nextjs/src/config/app-settings.tsx</code>.</div>
+<pre class="prettyprint linenums">
+...
+appSidebarWide: true,    // LINE 53
+appSidebarLight: true,   // LINE 66
+...
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the navbar desktop toggler to the <code>.app-header</code>  in <code>template_react/src/components/header.tsx</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" className="app-header"&gt;
+  &lt;!-- BEGIN navbar-header --&gt;
+  &lt;div className="navbar-header"&gt;
+    &lt;button type="button" className="navbar-desktop-toggler"&gt;
+      &lt;span className="icon-bar"&gt;&lt;/span&gt;
+      &lt;span className="icon-bar"&gt;&lt;/span&gt;
+      &lt;span className="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button type="button" className="navbar-mobile-toggler"&gt;
+      ...
+    &lt;/button&gt;
+    &lt;a className="navbar-brand"&gt;
+      Color Admin
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- END navbar-header --&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Material Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the variable from <code>template_nextjs/src/styles/nextjs.scss</code>.</div>							
+<pre class="prettyprint linenums">
+@import 'material/styles';
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Material Icons.</div>
+<pre class="prettyprint linenums">
+&lt;div className="menu-icon"&gt;
+  &lt;i className="material-icons"&gt;home&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the following variable from <code>template_nextjs/src/config/app-settings.tsx</code>.</div>
+<pre class="prettyprint linenums">
+...
+appSidebarWide: true,    // LINE 53
+...
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the navbar desktop toggler to the <code>.app-header</code>  in <code>template_nextjs/src/components/header/header.tsx</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" className="app-header"&gt;
+  &lt;!-- BEGIN navbar-header --&gt;
+  &lt;div className="navbar-header"&gt;
+    &lt;button type="button" className="navbar-desktop-toggler"&gt;
+      &lt;span className="icon-bar"&gt;&lt;/span&gt;
+      &lt;span className="icon-bar"&gt;&lt;/span&gt;
+      &lt;span className="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button type="button" className="navbar-mobile-toggler"&gt;
+      ...
+    &lt;/button&gt;
+    &lt;a className="navbar-brand"&gt;
+      Color Admin Material
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- END navbar-header --&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+							
+							<li>
+								<div style="padding-bottom: 5px">Add the floating navbar form to the <code>.app-header</code>  in <code>template_nextjs/src/components/header/header.tsx</code> AND <b>REMOVE</b> the default <code>.navbar-form</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" className="app-header"&gt;
+  &lt;!-- BEGIN header-nav --&gt;
+  &lt;div className="navbar-nav"&gt;
+    &lt;div className="navbar-item"&gt;
+      &lt;a href="#" className="navbar-link icon"&gt;
+        &lt;i className="material-icons"&gt;search&lt;/i&gt;
+      &lt;/a&gt;
+      
+      &lt;!-- REMOVE IT --&gt;
+      &lt;div className="navbar-item navbar-form"&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/div&gt;
+    ...
+  &lt;/div&gt;
+  &lt;!-- END header-nav --&gt;
+  
+  &lt;div className="navbar-floating-form"&gt;
+    &lt;button className="search-btn" type="submit"&gt;&lt;i className="material-icons"&gt;search&lt;/i&gt;&lt;/button&gt;
+    &lt;input type="text" className="form-control" placeholder="Search Something..." /&gt;
+    &lt;a href="#" className="close"&gt;
+      &lt;i className="material-icons"&gt;close&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the <code>.app-loader</code>  in <code>template_nextjs/public/index.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #loader --&gt;
+&lt;div id="loader" className="app-loader"&gt;
+  &lt;div className="material-loader"&gt;
+    &lt;svg className="circular" viewBox="25 25 50 50"&gt;
+      &lt;circle className="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"&gt;&lt;/circle&gt;
+    &lt;/svg&gt;
+    &lt;div className="message"&gt;Loading...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- END #loader --&gt;
+</pre>
+							</li>
+						</ol>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-scss"><strong>K) Using SCSS</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Now Vue.js version is fully scss configured. You may switch the Color Admin theme by changing the file <code>/template_nextjs/src/styles/nextjs.scss</code>.</p>
+<pre class="prettyprint linenums">
+@import 'default/styles';
+ 
+&lt;!-- other themes --&gt;
+@import 'apple/styles';
+@import 'facebook/styles';
+@import 'google/styles';
+@import 'material/styles';
+@import 'transparent/styles';
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="npm-package"><strong>L) NPM Package</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Below is the list of package that has been installed in this project. You may use the following example to find the package from their official website.
+							<code>https://www.npmjs.com/package/</code><code>@ng-bootstrap/ng-bootstrap</code>
+						</p>
+<pre class="prettyprint linenums">
+{
+  "name": "color-admin",
+  "version": "5.5.2",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@fullcalendar/bootstrap": "^6.1.18",
+    "@fullcalendar/daygrid": "^6.1.18",
+    "@fullcalendar/interaction": "^6.1.18",
+    "@fullcalendar/list": "^6.1.18",
+    "@fullcalendar/react": "^6.1.18",
+    "@fullcalendar/timegrid": "^6.1.18",
+    "@iconify/react": "^6.0.0",
+    "@mona-health/react-input-mask": "^3.0.3",
+    "@react-google-maps/api": "^2.20.7",
+    "bootstrap": "^5.3.7",
+    "bootstrap-icons": "^1.13.1",
+    "bootstrap-social": "^5.1.1",
+    "chart.js": "^4.5.0",
+    "datatables.net-bs5": "^2.3.2",
+    "datatables.net-buttons-bs5": "^3.2.4",
+    "datatables.net-fixedcolumns-bs5": "^5.0.4",
+    "datatables.net-react": "^1.0.1",
+    "datatables.net-responsive-bs5": "^3.0.5",
+    "flag-icons": "^7.5.0",
+    "jquery": "^3.7.1",
+    "jsvectormap": "^1.7.0",
+    "lity": "^2.4.1",
+    "masonry-layout": "^4.2.2",
+    "next": "15.3.5",
+    "photoswipe": "^5.4.4",
+    "quill": "^2.0.3",
+    "react": "^19.1.0",
+    "react-apexcharts": "^1.7.0",
+    "react-bootstrap-daterangepicker": "^8.0.0",
+    "react-color": "^2.19.3",
+    "react-countdown": "^2.3.6",
+    "react-datepicker": "^8.4.0",
+    "react-datetime": "^3.3.1",
+    "react-dom": "^19.1.0",
+    "react-highlight": "^0.15.0",
+    "react-notifications-component": "^4.0.1",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-quill-new": "^3.4.6",
+    "react-select": "^5.10.1",
+    "react-tag-input-component": "^2.0.2",
+    "sass": "1.77.7",
+    "simple-line-icons": "^2.5.5"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/bootstrap": "^5.2.10",
+    "@types/datatables.net-buttons": "^2.2.3",
+    "@types/masonry-layout": "^4.2.8",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-color": "^3.0.13",
+    "@types/react-dom": "^19",
+    "@types/react-highlight": "^0.12.8",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.5",
+    "typescript": "^5"
+  },
+  "overrides": {
+    "react-datepicker": {
+      "react": ">=19.0.0",
+      "react-dom": ">=19.0.0"
+    },
+    "react-notifications-component": {
+      "react": ">=19.0.0",
+      "react-dom": ">=19.0.0"
+    },
+    "react-tag-input-component": {
+      "react": ">=19.0.0",
+      "react-dom": ">=19.0.0"
+    }
+  }
+}
+</pre>
+					</div>
+				</div><!-- end row-fluid -->
+			</div><!-- end span12 -->
+		</div><!-- end row-fluid -->
+	</div><!-- end container -->
+	
+	<footer class="footer">
+		<div class="container text-left">
+			<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes, you might consider visiting the forums and inbox us your question via <a href="https://wrapbootstrap.com/user/seanngu/message">wrapbootstrap</a>.</p> 
+			<br />
+			<p class="append-bottom alt large"><strong>Sean Ngu</strong></p>
+			<p><a href="#top">Go To Table of Contents</a></p>
+		</div>
+	</footer><!-- end footer -->
+	
+	<script src="assets/bootstrap/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-transition.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-alert.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-modal.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-dropdown.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-scrollspy.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tab.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tooltip.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-popover.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-button.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-collapse.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-carousel.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-typeahead.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-affix.js"></script>
+
+	<script src="assets/bootstrap/js/holder/holder.js"></script>
+	<script src="assets/bootstrap/js/google-code-prettify/prettify.js"></script>
+	<script src="assets/bootstrap/js/application.js"></script>
+</body>
+</html>

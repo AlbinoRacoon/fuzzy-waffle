@@ -1,0 +1,107 @@
+<script>
+  import ApexCharts from '/src/components/plugins/ApexCharts.svelte';
+  import { onMount } from 'svelte';
+  import { appVariables } from '/src/stores/appVariables.js';
+  
+  let chartData = [];
+  
+  function getChartData(appVariables) {
+    return {
+      options: {
+        chart: {
+          height: 350,
+          type: 'line',
+          stacked: false
+        },
+        series: [
+          { name: 'Income', type: 'column', data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6] }, 
+          { name: 'Cashflow', type: 'column', data: [1.1, 3, 3.1, 4, 4.1, 4.9, 6.5, 8.5] }, 
+          { name: 'Revenue', type: 'line', data: [20, 29, 37, 36, 44, 45, 50, 58] }
+        ],
+        dataLabels: { enabled: false },
+        series: [
+          { name: 'Income', type: 'column', data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6] },
+          { name: 'Cashflow', type: 'column', data: [1.1, 3, 3.1, 4, 4.1, 4.9, 6.5, 8.5] }, 
+          { name: 'Revenue', type: 'line', data: [20, 29, 37, 36, 44, 45, 50, 58] }
+        ],
+        stroke: { width: [0, 0, 3] },
+        colors: [appVariables.color.primary, appVariables.color.teal, appVariables.color.warning],
+        title: {
+          text: 'XYZ - Stock Analysis (2015 - 2024)',
+          align: 'left',
+          offsetX: 110
+        },
+        xaxis: {
+          categories: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          axisBorder: {
+            show: true,
+            color: appVariables.color.borderColor,
+            height: 1,
+            width: '100%',
+            offsetX: 0,
+            offsetY: -1
+          },
+          axisTicks: {
+            show: true,
+            borderType: 'solid',
+            color: appVariables.color.borderColor,
+            height: 6,
+            offsetX: 0,
+            offsetY: 0
+          }
+        },
+        yaxis: [{
+          axisTicks: { show: true, color: appVariables.color.borderColor },
+          axisBorder: { show: true, color: appVariables.color.borderColor },
+          labels: { style: { colors: [appVariables.color.bodyColor] } },
+          title: {
+            text: "Income (thousand crores)",
+            style: { color: appVariables.color.bodyColor }
+          },
+          tooltip: { enabled: true }
+        },{
+          seriesName: 'Income',
+          opposite: true,
+          axisTicks: { show: true, color: appVariables.color.borderColor },
+          axisBorder: { show: true, color: appVariables.color.borderColor },
+          labels: { style: { colors: [appVariables.color.bodyColor] } },
+          title: {
+            text: "Operating Cashflow (thousand crores)",
+            style: { color: appVariables.color.bodyColor }
+          },
+        }, {
+          seriesName: 'Revenue',
+          opposite: true,
+          axisTicks: { show: true, color: appVariables.color.borderColor },
+          axisBorder: { show: true, color: appVariables.color.borderColor },
+          labels: { style: { colors: [appVariables.color.bodyColor] } },
+          title: {
+            text: "Revenue (thousand crores)",
+            style: { color: appVariables.color.bodyColor }
+          }
+        }],
+        tooltip: {
+          fixed: {
+            enabled: true,
+            position: 'topLeft',
+            offsetY: 30,
+            offsetX: 60
+          },
+        },
+        legend: { horizontalAlign: 'left', offsetX: 40 }
+      }
+    };
+  }
+
+  onMount(async () => {
+    appVariables.subscribe(value => {
+      if (value.color) {
+        chartData = getChartData(value);
+      }
+    });
+  });
+</script>
+
+{#if chartData}
+  <ApexCharts options={chartData.options}></ApexCharts>
+{/if}

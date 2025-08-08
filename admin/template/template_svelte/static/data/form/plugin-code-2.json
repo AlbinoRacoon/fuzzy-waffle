@@ -1,0 +1,17 @@
+<script>
+  import { onMount } from 'svelte';
+  import flatpickr from 'flatpickr';
+  import 'flatpickr/dist/flatpickr.min.css';
+  
+  let daterangepicker;
+  
+  onMount(async () => {
+    daterangepicker = flatpickr("#daterangepickerInput", {
+      mode: 'range',
+      dateFormat: 'Y-m-d'
+    });
+  });
+</script>
+
+<!-- html -->
+<input type="text" class="form-control" placeholder="yyyy-mm-dd to yyyy-mm-dd" name="daterangepicker" id="daterangepickerInput" />

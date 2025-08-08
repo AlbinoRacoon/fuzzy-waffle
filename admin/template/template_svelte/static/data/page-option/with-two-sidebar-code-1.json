@@ -1,0 +1,15 @@
+<script>
+  import { onMount, onDestroy } from 'svelte';
+  import { appOptions } from '/src/stores/appOptions.js';
+  
+  onMount(async () => {
+    $appOptions.appSidebarTwo = true;
+    $appOptions.appSidebarEndToggled = true;
+  });
+  
+  onDestroy(() => {
+    $appOptions.appSidebarTwo = false;
+    $appOptions.appSidebarEndToggled = false;
+  });
+</script>
+

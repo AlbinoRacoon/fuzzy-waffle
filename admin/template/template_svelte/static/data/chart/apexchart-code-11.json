@@ -1,0 +1,53 @@
+<script>
+  import ApexCharts from '/src/components/plugins/ApexCharts.svelte';
+  import { onMount } from 'svelte';
+  import { appVariables } from '/src/stores/appVariables.js';
+  
+  let chartData = [];
+  
+  function getChartData(appVariables) {
+    return {
+      options: {
+        chart: { height: 350, type: 'radialBar' },
+        series: [76, 67, 61, 90],
+        plotOptions: {
+          radialBar: {
+            offsetY: -10,
+            startAngle: 0,
+            endAngle: 270,
+            hollow: { margin: 5, size: '30%', background: 'transparent', image: undefined },
+            track: { background: 'rgba('+ appVariables.color.darkRgb + ', .25)' },
+            dataLabels: { name: { show: false }, value: { show: false } }
+          }
+        },
+        colors: [appVariables.color.cyan, appVariables.color.primary, appVariables.color.indigo, appVariables.color.gray300],
+        labels: ['Vimeo', 'Messenger', 'Facebook', 'LinkedIn'],
+        legend: {
+          show: true,
+          floating: true,
+          position: 'left',
+          offsetX: 140,
+          offsetY: 15,
+          labels: { useSeriesColors: true },
+          markers: { size: 0 },
+          formatter: function(seriesName, opts) {
+            return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex]
+          },
+          itemMargin: { horizontal: 1 }
+        }
+      }
+    };
+  }
+
+  onMount(async () => {
+    appVariables.subscribe(value => {
+      if (value.color) {
+        chartData = getChartData(value);
+      }
+    });
+  });
+</script>
+
+{#if chartData}
+  <ApexCharts options={chartData.options}></ApexCharts>
+{/if}

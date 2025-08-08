@@ -1,0 +1,29 @@
+<script>
+  import Card from '/src/components/bootstrap/Card.svelte';
+  import { onMount } from 'svelte';
+  
+  let codeArray = [];
+  let masonry;
+  let masonryContainer;
+  
+  function percentPosition(node) {
+    node.setAttribute('data-masonry', '{"percentPosition": true}');
+  }
+  
+  onMount(async () => {
+    masonry = await import('masonry-layout');
+    new masonry.default(masonryContainer);
+  });
+</script>
+<!-- html -->
+<div class="row" bind:this={masonryContainer} use:percentPosition>
+  <div class="col-sm-6 col-lg-4 mb-4">
+    <Card>...</Card>
+  </div>
+  <div class="col-sm-6 col-lg-4 mb-4">
+    <Card>...</Card>
+  </div>
+  <div class="col-sm-6 col-lg-4 mb-4">
+    <Card>...</Card>
+  </div>
+</div>

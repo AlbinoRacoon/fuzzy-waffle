@@ -1,0 +1,21 @@
+<script>
+  import PerfectScrollbar from '/src/components/plugins/PerfectScrollbar.svelte';
+  import { onMount, onDestroy } from 'svelte';
+  import { appOptions } from '../../../stores/appOptions.js';
+  
+  onMount(async () => {
+    $appOptions.appContentClass = 'p-0';
+    $appOptions.appContentFullHeight = true;
+  });
+  
+  onDestroy(() => {
+    $appOptions.appContentClass = '';
+    $appOptions.appContentFullHeight = false;
+  });
+</script>
+
+<PerfectScrollbar class="h-100">
+  <div class="app-content-padding">
+    <!-- content here -->
+  </div>
+</PerfectScrollbar>

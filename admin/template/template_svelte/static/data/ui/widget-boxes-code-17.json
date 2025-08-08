@@ -1,0 +1,8 @@
+<script>
+  import Panel from '/src/components/bootstrap/Panel.svelte';
+  import PanelHeader from '/src/components/bootstrap/PanelHeader.svelte';
+</script>
+
+<Panel>
+  <PanelHeader class="bg-cyan-700 text-white">...</PanelHeader>
+</Panel>

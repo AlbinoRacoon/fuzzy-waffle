@@ -1,0 +1,56 @@
+<script>
+  import ApexCharts from '/src/components/plugins/ApexCharts.svelte';
+  import { onMount } from 'svelte';
+  import { appVariables } from '/src/stores/appVariables.js';
+  
+  let chartData = [];
+  
+  function getChartData(appVariables) {
+    return {
+      options: {
+        chart: { height: 350, type: 'bar' },
+        series: [
+          { data: [44, 55, 41, 64, 22, 43, 21] },
+          { data: [53, 32, 33, 52, 13, 44, 32] }
+        ],
+        plotOptions: {
+          bar: {
+            horizontal: true,
+            dataLabels: { position: 'top' }
+          }  
+        },
+        dataLabels: {
+          enabled: true,
+          offsetX: -6,
+          style: { fontSize: '12px', colors: [appVariables.color.dark] }
+        },
+        colors: [appVariables.color.warning, appVariables.color.gray500],
+        stroke: { show: false },
+        xaxis: {
+          categories: [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          axisBorder: {
+            show: true,
+            color: appVariables.color.gray300,
+            height: 1,
+            width: '100%',
+            offsetX: 0,
+            offsetY: -1
+          },
+          axisTicks: { show: true, borderType: 'solid', color: appVariables.color.gray300,  height: 6, offsetX: 0, offsetY: 0 }
+        }
+      }
+    };
+  }
+
+  onMount(async () => {
+    appVariables.subscribe(value => {
+      if (value.color) {
+        chartData = getChartData(value);
+      }
+    });
+  });
+</script>
+
+{#if chartData}
+  <ApexCharts options={chartData.options}></ApexCharts>
+{/if}

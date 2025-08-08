@@ -1,0 +1,19 @@
+<script>
+  import Select from 'svelte-select';
+  
+  let items = ['One', 'Two', 'Three'];
+  let complexItems = [
+    {value: 'chocolate', label: 'Chocolate', group: 'Sweet'},
+    {value: 'pizza', label: 'Pizza', group: 'Savory'},
+    {value: 'cake', label: 'Cake', group: 'Sweet', selectable: false},
+    {value: 'chips', label: 'Chips', group: 'Savory'},
+    {value: 'ice-cream', label: 'Ice Cream', group: 'Sweet'}
+  ];
+</script>
+
+<!-- default -->
+<Select {items} bind:value />
+
+<!-- multiple value -->
+<Select items={complexItems} multiple={true}></Select>
+                        

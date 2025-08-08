@@ -1,0 +1,11 @@
+<script>
+  import Card from '/src/components/bootstrap/Card.svelte';
+  import CardGroup from '/src/components/bootstrap/CardGroup.svelte';
+</script>
+
+<!-- html -->
+<CardGroup>
+  <Card class="m-1">...</Card>
+  <Card class="m-1">...</Card>
+  <Card class="m-1">...</Card>
+</CardGroup>

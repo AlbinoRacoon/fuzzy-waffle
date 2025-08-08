@@ -1,0 +1,996 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title> Documentation - Color Admin</title>
+	<!-- Bootstrap styles -->
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="assets/bootstrap/css/docs.css" rel="stylesheet">
+	<link href="assets/bootstrap/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+	<div class="navbar navbar-inverse navbar-page">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="index.html">Documentation</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="">
+							<a href="index.html">HTML</a>
+						</li>
+						<li class="">
+							<a href="index_ajax.html">Ajax</a>
+						</li>
+						<li class="">
+							<a href="index_angular_1x.html">Angular 1.x</a>
+						</li>
+						<li class="">
+							<a href="index_angular_20.html">Angular 20</a>
+						</li>
+						<li class="">
+							<a href="index_laravel.html">Laravel 12</a>
+						</li>
+						<li class="">
+							<a href="index_vue.html">Vue 3</a>
+						</li>
+						<li class="">
+							<a href="index_react.html">React 19</a>
+						</li>
+						<li class="">
+							<a href="index_asp.html">ASP.NET</a>
+						</li>
+						<li class="active">
+							<a href="index_django.html">Django</a>
+						</li>
+						<li class="">
+							<a href="index_svelte.html">Svelte</a>
+						</li>
+						<li class="">
+							<a href="index_nextjs.html">NextJS</a>
+						</li>
+						</ul>
+					<ul class="nav pull-right">
+						<li class="">
+							<a href="index_change_log.html">Change Log</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1 class="text-center">Color Admin</h1>
+			<p class="lead text-center">&ldquo;Django Version&rdquo; Documentation by &ldquo;Sean Ngu&rdquo; v5.5.2</p>
+		</div>
+		<div class="jumbotron-cover"></div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="well with-cover clearfix">
+					<div class="well-cover" style="background-image: url(assets/images/django.jpg); background-size: 80% auto; background-position: center; background-repeat: no-repeat; background-color: #fff;"></div>
+					<p>
+						<strong>
+							Updated on: 08/July/2025<br>
+							By: Sean Ngu<br>
+						</strong>
+					</p>
+					<p style="margin: 0;">
+						If you have any inquiries or require further assistance beyond what is covered in this help file,
+						please do not hesitate to send us a <a href="https://wrapbootstrap.com/user/seanngu/message" target="_blank">message</a>
+						through Wrapbootstrap. We are more than happy to help. <br /><br />Thank you very much!
+					</p>
+				</div>
+			</div><!-- end span12 -->
+		</div><!-- end row -->
+		<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<li><a href="#installation"><i class="icon-chevron-right"></i>Installation</a></li>
+					<li><a href="#file-structure"><i class="icon-chevron-right"></i>File Structure</a></li>
+					<li><a href="#layout-structure"><i class="icon-chevron-right"></i>Layout Structure</a></li>
+					<li><a href="#layout-options"><i class="icon-chevron-right"></i>Layout Options</a></li>
+					<li><a href="#sidebar-menu"><i class="icon-chevron-right"></i>Sidebar Menu</a></li>
+					<li><a href="#css"><i class="icon-chevron-right"></i>CSS</a></li>
+					<li><a href="#javascript"><i class="icon-chevron-right"></i>JavaScript</a></li>
+					<li><a href="#page-options"><i class="icon-chevron-right"></i>Page Options</a></li>
+					<li><a href="#page-dark-mode"><i class="icon-chevron-right"></i>Dark Mode <span class="label">NEW</span></a></li>
+					<li><a href="#page-rtl-mode"><i class="icon-chevron-right"></i>RTL Mode <span class="label">NEW</span></a></li>
+					<li><a href="#page-switch-design"><i class="icon-chevron-right"></i>Switch Design <span class="label">NEW</span></a></li>
+					<li><a href="#scss"><i class="icon-chevron-right"></i>SCSS</a></li>
+					<li><a href="#npm-package"><i class="icon-chevron-right"></i>NPM Package</a></li>
+				</ul>
+			</div>
+			<div class="span9">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="installation"><strong>A) Installation</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Follow the following step to install the django in your localhost<br />
+							You may refer to their official documentation for how to setup the development environment. <br />
+							<a href="https://docs.djangoproject.com/en/5.0/intro/install/" target="_blank">Setup Guide</a>
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- run the following command --&gt; 
+cd /your-path-url/template_django/ColorAdminApp/gulp
+npm install
+gulp plugins 
+gulp
+
+cd /your-path-url/template_django
+python manage.py runserver
+
+&lt;!-- browse the url --&gt; 
+http://127.0.0.1:8000/
+</pre>
+						<p>
+							Make sure python >= 3.10 & node.js has been installed on your localhost / server
+						</p>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="file-structure"><strong>B) File Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>File structure overview for Django Version</p>
+<pre class="prettyprint linenums">
+template_django/                    
+  ├── db.sqlite3                     // SQLite database file
+  ├── manage.py                      // Django management script
+  ├── ColorAdmin/                     // Django project directory
+  │   ├── asgi.py                    // ASGI configuration
+  │   ├── settings.py                // Django settings
+  │   ├── urls.py                    // URL routing
+  │   ├── wsgi.py                    // WSGI configuration
+  │   ├── __init__.py                // Package initialization
+  │   ├── __pycache__/               // Cached Python files
+  │   └── templates/                 // HTML templates
+  └── ColorAdminApp/                  // Django app directory
+      ├── admin.py                   // Admin configuration
+      ├── apps.py                    // App configuration
+      ├── models.py                  // Database models
+      ├── tests.py                   // Unit tests
+      ├── urls.py                    // App-specific URL routing
+      ├── views.py                   // View functions
+      ├── __init__.py                // Package initialization
+      ├── __pycache__/               // Cached Python files
+      ├── gulp/                      // Gulp build system
+      │   ├── gulpfile.js            // Gulp configuration
+      │   ├── package.json           // Node.js package file
+      │   └── src/                   // Source files for Gulp tasks
+      ├── migrations/                // Database migration files
+      ├── static/                    // Static files (CSS, JS, images)
+      │   ├── css
+      │   ├── data
+      │   ├── img
+      │   ├── js
+      │   ├── plugins
+      │   └── webfonts
+      ├── utils/                     // Utility functions
+      │   ├── __pycache__/           // Cached Python files
+      │   └── context_processors.py  // Context processors for sidebar array
+      └── templates/                 // App-specific HTML templates
+          ├── base.html              // Base template
+          ├── pages/                 // Demo pages
+          └── partial/               // Reusable partial templates
+              ├── header.html
+              ├── header-mega-menu.html
+              ├── scroll-top-btn.html
+              ├── sidebar.html
+              ├── sidebar-right.html
+              ├── theme-panel.html
+              └── top-menu.html
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="layout-structure"><strong>C) Layout Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>We split the header, sidebar, footer and etc into few other part and include it in the base file. Base file has been located in <code>/template_django/ColorAdminApp/templates/base.html</code>.</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en" {% block htmlAttr %}{% endblock %}&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Color Admin | {% block title %}{% endblock %}&lt;/title&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;meta name="description" content=""&gt;
+  &lt;meta name="author" content=""&gt;
+  
+  &lt;!-- ================== BEGIN core-css ================== --&gt;
+  {% load static %}
+  &lt;link href="{% static 'css/vendor.min.css' %}" rel="stylesheet" /&gt;
+  &lt;link href="{% static 'css/default/app.min.css' %}" rel="stylesheet" /&gt;
+  &lt;!-- ================== END core-css ================== --&gt;
+  
+  {% block css %}{% endblock %}
+&lt;/head&gt;
+&lt;body class="{{ bodyClass }}{% if appHeaderHide is not None %} pace-top {% endif %}{% if appBoxedLayout %} boxed-layout {% endif %}" {{ bodyAttr }}&gt;
+  
+  &lt;div id="app" class="app  
+    {{ appClass }}
+    {% if not appHeaderHide %}app-header-fixed{% endif %}
+    {% if not appSidebarHide %}app-sidebar-fixed{% endif %}
+    {% if appHeaderHide is not None %}app-without-header{% endif %}
+    {% if appSidebarEnd is not None %}app-with-end-sidebar{% endif %}
+    {% if appSidebarEndToggled is not None %}app-sidebar-end-toggled{% endif %}
+    {% if appSidebarMinified is not None %}app-sidebar-minified{% endif %}
+    {% if appSidebarWide %}app-with-wide-sidebar{% endif %}
+    {% if appSidebarTwo is not None %}app-with-two-sidebar{% endif %}
+    {% if appSidebarHide is not None %}app-without-sidebar{% endif %}
+    {% if appSidebarHover is not None %}app-with-hover-sidebar{% endif %}
+    {% if appTopMenu is not None %}app-with-top-menu{% endif %}
+    {% if appContentFullHeight is not None %}app-content-full-height{% endif %}
+  "&gt;
+    {% if appHeaderHide is None %}
+      {% include 'partial/header.html' %}
+    {% endif %}
+    
+    {% if appSidebarHide is None %}
+      {% include 'partial/sidebar.html' %}
+    {% endif %}
+    
+    {% if appSidebarTwo %}
+      {% include 'partial/sidebar-right.html' %}
+    {% endif %}
+    
+    {% if appTopMenu %}
+      {% include 'partial/top-menu.html' %}
+    {% endif %}
+    
+    &lt;div class="app-content {{ appContentClass }}"&gt;
+      {% block content %}{% endblock %}
+    &lt;/div&gt;
+    
+    {% include 'partial/theme-panel.html' %}
+  &lt;/div&gt;
+
+  {% include 'partial/scroll-top-btn.html' %} 
+  
+  {% block outter_content %}{% endblock %}
+
+  &lt;!-- ================== BEGIN core-js ================== --&gt;
+  &lt;script src="{% static 'js/vendor.min.js' %}"&gt;&lt;/script&gt;
+  &lt;script src="{% static 'js/app.min.js' %}"&gt;&lt;/script&gt;
+  &lt;!-- ================== END core-js ================== --&gt;
+  
+  {% block js %}{% endblock %}
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="layout-options"><strong>D) Layout Options</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Below is a list of supported settings that can be used as context variables in <code>views.py</code>.</p>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Variable</th>
+									<th>Usage</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>"bodyClass": "pace-top"</code></td>
+									<td>Set the css class for <code>&lt;body&gt;</code> tag</td>
+								</tr>
+								<tr>
+									<td><code>"appClass": "p-0"</code></td>
+									<td>Set the css class for <code>.app</code></td>
+								</tr>
+								<tr>
+									<td><code>"appHeaderHide": 1</code></td>
+									<td>Set to exclude the header from the page</td>
+								</tr>
+								<tr>
+									<td><code>"appHeaderInverse": 1</code></td>
+									<td>Set to enable the header dark mode</td>
+								</tr>
+								<tr>
+									<td><code>"appHeaderMegaMenu": 1</code></td>
+									<td>Set to show the header mega menu</td>
+								</tr>
+								<tr>
+									<td><code>"appHeaderLanguageBar": 1</code></td>
+									<td>Set to show the header language bar</td>
+								</tr>
+								<tr>
+									<td><code>"appTopMenu": 1</code></td>
+									<td>Set to include the top menu</td>
+								</tr>
+								<tr>
+									<td><code>"appSidebarHide": 1</code></td>
+									<td>Set to exclude the sidebar from the page</td>
+								</tr>
+								<tr>
+									<td><code>"appSidebarEnd": 1</code></td>
+									<td>Set to show the sidebar in right direction</td>
+								</tr>
+								<tr>
+									<td><code>"appSidebarTwo": 1</code></td>
+									<td>Set to show two sidebar in a page</td>
+								</tr>
+								<tr>
+									<td><code>"appSidebarEndToggled": 1</code></td>
+									<td>Set to toggle the right sidebar when page load</td>
+								</tr>
+								<tr>
+									<td><code>"appSidebarTransparent": 1</code></td>
+									<td>Set to enable the sidebar in transparent mode</td>
+								</tr>
+								<tr>
+									<td><code>"appSidebarWide": 1</code></td>
+									<td>Set to enable the sidebar in wide mode</td>
+								</tr>
+								<tr>
+									<td><code>"appSidebarMinified": 1</code></td>
+									<td>Set to enable the sidebar in minify mode</td>
+								</tr>
+								<tr>
+									<td><code>"appSidebarLight": 1</code></td>
+									<td>Set to enable the sidebar in light mode</td>
+								</tr>
+								<tr>
+									<td><code>"appSidebarHover": 1</code></td>
+									<td>Set to enable the sidebar in hover mode</td>
+								</tr>
+								<tr>
+									<td><code>"appSidebarSearch": 1</code></td>
+									<td>Set to enable the sidebar menu search function</td>
+								</tr>
+								<tr>
+									<td><code>"appBoxedLayout": 1</code></td>
+									<td>Set to make the page become boxed layout</td>
+								</tr>
+								<tr>
+									<td><code>"appContentFullHeight": 1</code></td>
+									<td>Set to make the page content full height</td>
+								</tr>
+								<tr>
+									<td><code>"appContentClass": "p-0"</code></td>
+									<td>Set the css class for <code>.app-content</code></td>
+								</tr>
+							</tbody>
+						</table>
+						<p>Using blocks to add title / css / js / outter content by page level.</p>
+<pre class="prettyprint linenums">
+// example for how to add page title
+{% block title %}Dashboard{% endblock %}
+
+// example for how to add page level css
+{% block css %}
+  &lt;link href="{% static 'plugins/photoswipe/dist/photoswipe.css' %}" rel="stylesheet"&gt;
+  ...
+{% endblock %}
+
+// example for how to add page level js
+{% block js %}
+  &lt;script src="{% static 'plugins/photoswipe/dist/photoswipe-ui-default.min.js' %}"&gt;&lt;/script&gt;
+  ...
+{% endblock %}
+
+// example of how to add content to the outer app-content div
+{% block outter_content %}
+  your content here
+  ...
+{% endblock %}
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="sidebar-menu"><strong>E) Sidebar Menu</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							The sidebar menu is generated in <code>/utils/context_processors.py</code> and 
+							rendered globally through <code>/templates/partial/sidebar.html</code>. 
+							Below is an example of the sidebar menu array that can be defined in <code>context_processors.py</code>. 
+							The sidebar menu will automatically be set to active based on the URL name specified in <code>urls.py</code>.
+						</p>
+<pre class="prettyprint linenums">
+  sidebar_menu = [{
+    'text': 'Navigation',
+    'is_header': 1
+  },{
+    'url': '/',
+    'icon': 'fa fa-sitemap',
+    'text': 'Dashboard',
+    'name': 'index'
+  }, {
+    'icon': 'fa fa-envelope',
+    'text': 'Email',
+    'children': [{
+      'url': '/email/inbox',
+      'action': 'Inbox',
+      'text': 'Inbox',
+      'name': 'emailInbox'
+    }]
+  }]
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="css"><strong>F) CSS</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>All the css files used in Color Admin has been compiled into two files <code>app.min.css</code> and <code>vendor.min.css</code> by gulp command. You may change the color scheme from <code>/gulp/src/scss/_variables.scss</code>.
+						<br /><br />
+						<div style="margin-bottom: 5px;"><code>vendor.min.css</code></div>
+						<ol>
+							<li>FontAwesome</li>
+							<li>jQuery UI</li>
+							<li>Animate.css</li>
+							<li>Pace Loader</li>
+							<li>Perfect Scrollbar</li>
+						</ol>
+						<div style="margin-bottom: 5px;"><code>app.min.css</code></div>
+						<ol>
+							<li>Bootstrap</li>
+							<li>Color Admin Core CSS</li>
+						</ol>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="javascript"><strong>G) Javascript</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>This theme compiles 6 javascript library into two files <code>app.min.js</code> and <code>vendor.min.js</code> by gulp command.
+						<br /><br />
+						<div style="margin-bottom: 5px;"><code>vendor.min.js</code></div>
+						<ol>
+							<li>Pace Loader</li>
+							<li>jQuery</li>
+							<li>jQuery UI</li>
+							<li>Bootstrap</li>
+							<li>Perfect Scrollbar</li>
+							<li>JavaScript Cookie</li>
+						</ol>
+						<div style="margin-bottom: 5px;"><code>app.min.js</code></div>
+						<ol>
+							<li>Color Admin Core Javascript</li>
+						</ol>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-options"><strong>H) Page Options</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p><b>Sidebar Minified</b>:</p>
+<pre class="prettyprint linenums">
+def index(request):
+  context = {
+    "appSidebarMinified": 1
+  }
+  return render(request, "pages/index.html", context)
+</pre>
+						<p><b>Full height</b>:</p>
+<pre class="prettyprint linenums">
+def index(request):
+  context = {
+    "appContentFullHeight": 1,
+    "appContentClass": "p-0"
+  }
+  return render(request, "pages/index.html", context)
+</pre>
+						<p><b>Full width:</b></p>
+<pre class="prettyprint linenums">
+def index(request):
+  context = {
+    "appSidebarHide": 1
+  }
+  return render(request, "pages/index.html", context)
+</pre>
+						<p><b>Boxed Layout</b></p>
+<pre class="prettyprint linenums">
+def index(request):
+  context = {
+    "appBoxedLayout": 1
+  }
+  return render(request, "pages/index.html", context)
+</pre>
+						<p><b>Top Menu</b></p>
+<pre class="prettyprint linenums">
+def index(request):
+  context = {
+    "appTopMenu": 1,
+    "appSidebarHide": 1
+  }
+  return render(request, "pages/index.html", context)
+</pre>
+						<p><b>Without Sidebar</b></p>
+<pre class="prettyprint linenums">
+def index(request):
+  context = {
+    "appSidebarHide": 1
+  }
+  return render(request, "pages/index.html", context)
+</pre>
+						<p><b>Without Header</b></p>
+<pre class="prettyprint linenums">
+def index(request):
+  context = {
+    "appHeaderHide": 1
+  }
+  return render(request, "pages/index.html", context)
+</pre>
+						<p><b>Sidebar Styling</b></p>
+<pre class="prettyprint linenums">
+def index(request):
+  context = {
+    "appSidebarWide": 1,
+    "appSidebarLight": 1,
+    "appSidebarTransparent": 1
+  }
+  return render(request, "pages/index.html", context)
+</pre>
+						<p><b>Header Styling</b></p>
+<pre class="prettyprint linenums">
+def index(request):
+  context = {
+    "appHeaderInverse": 1,
+    "appHeaderMegaMenu": 1,
+    "appHeaderLanguageBar": 1
+  }
+  return render(request, "pages/index.html", context)
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-dark-mode"><strong>I) Dark Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Add the <code>data-bs-theme="dark"</code> attribute to <code>&lt;html&gt;</code> for <code>template_django/ColorAdminApp/templates/base.html</code> in order to enable the dark mode.</p>
+						<div class="alert alert-info">
+							If you have <b>pre-select</b> the dark-mode option in theme panel, do not forget to <b>clear</b> the browser cookie or <b>remove</b> the theme panel so that it won't affect the dark-mode class while page load.
+						</div>
+<pre class="prettyprint linenums">
+&lt;html lang="en" data-bs-theme="dark"&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-rtl-mode"><strong>J) RTL Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Add the <code>dir="rtl"</code> attribute to <code>&lt;html&gt;</code> for <code>template_django/ColorAdminApp/templates/base.html</code> in order to enable Right-To-Left (RTL) layout direction.</p>
+<pre class="prettyprint linenums">
+&lt;html lang="en" dir="rtl"&gt;
+</pre>
+						<p>This will flip the layout direction of the entire page to support RTL languages like Arabic, Hebrew, or Persian.</p>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-switch-design"><strong>K) Switch Design</strong> - <a href="#top">top</a></h3>
+						</div>
+						<h4 style="margin-bottom: 15px">Apple Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the following code from <code>template_django/ColorAdminApp/templates/base.html</code>.</div>							
+<pre class="prettyprint linenums">
+&lt;link href="{% static 'css/apple/app.min.css' %}" rel="stylesheet" /&gt;
+&lt;script src="{% static 'plugins/ionicons/dist/ionicons/ionicons.js' %}"&gt;&lt;/script&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Ionicons and background color class is needed as well.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;ion-icon name="pulse-outline" class="bg-gradient-blue"&gt;&lt;/ion-icon&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Facebook Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the following code from <code>template_django/ColorAdminApp/templates/base.html</code>.</div>							
+<pre class="prettyprint linenums">
+&lt;link href="{% static 'css/facebook/app.min.css' %}" rel="stylesheet" /&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the attribute <code>[data-bs-theme="dark"]</code> to the <code>.app-header</code> container in <code>template_django/ColorAdminApp/templates/partial/header.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;div id="header" class="app-header" data-bs-theme="dark"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Transparent Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the following code from <code>template_django/ColorAdminApp/templates/base.html</code>.</div>							
+<pre class="prettyprint linenums">
+&lt;link href="{% static 'css/transparent/app.min.css' %}" rel="stylesheet" /&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the <code>.app-cover</code> next to the <code>&lt;body&gt;</code> tag in <code>template_django/ColorAdminApp/templates/base.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;body&gt;
+  &lt;!-- BEGIN page-cover --&gt;
+  &lt;div class="app-cover"&gt;&lt;/div&gt;
+  &lt;!-- END page-cover --&gt;
+  
+  ...
+&lt;/body&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Google Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the following code from <code>template_django/ColorAdminApp/templates/base.html</code>.</div>							
+<pre class="prettyprint linenums">
+&lt;link href="{% static 'css/google/app.min.css' %}" rel="stylesheet" /&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Material Icons.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;i class="material-icons"&gt;home&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the class <code>.app-with-wide-sidebar</code> to the <code>.app</code> container in <code>template_django/ColorAdminApp/templates/base.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;div id="app" class="app app-with-wide-sidebar"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the navbar desktop toggler to the <code>.app-header</code>  in <code>template_django/ColorAdminApp/templates/partial/header.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN navbar-header --&gt;
+  &lt;div class="navbar-header"&gt;
+    &lt;button type="button" class="navbar-desktop-toggler" data-toggle="app-sidebar-minify"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-mobile"&gt;
+      ...
+    &lt;/button&gt;
+    &lt;a href="index.html" class="navbar-brand"&gt;
+      Color Admin
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- END navbar-header --&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+						</ol>
+						<hr style="margin-top: 30px" />
+						<h4 style="margin-bottom: 15px">Material Design</h4>
+						<ol>
+							<li>
+								<div style="padding-bottom: 5px;">Change the following code from <code>template_django/ColorAdminApp/templates/base.html</code>.</div>							
+<pre class="prettyprint linenums">
+&lt;link href="{% static 'css/material/app.min.css' %}" rel="stylesheet" /&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the sidebar icon from Fontawesome to Material Icons.</div>
+<pre class="prettyprint linenums">
+&lt;div class="menu-icon"&gt;
+  &lt;i class="material-icons"&gt;home&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the class <code>.app-with-wide-sidebar</code> to the <code>.app</code> container in <code>template_django/ColorAdminApp/templates/base.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;div id="app" class="app app-with-wide-sidebar"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Add the navbar desktop toggler to the <code>.app-header</code>  in <code>template_django/ColorAdminApp/templates/partial/header.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN navbar-header --&gt;
+  &lt;div class="navbar-header"&gt;
+    &lt;button type="button" class="navbar-desktop-toggler" data-toggle="app-sidebar-minify"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-mobile"&gt;
+      ...
+    &lt;/button&gt;
+    &lt;a href="index.html" class="navbar-brand"&gt;
+      Color Admin Material
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- END navbar-header --&gt;
+  ...
+&lt;/div&gt;
+</pre>
+							</li>
+							
+							<li>
+								<div style="padding-bottom: 5px">Add the floating navbar form to the <code>.app-header</code>  in <code>template_django/ColorAdminApp/templates/partial/header.html</code> AND <b>REMOVE</b> the default <code>.navbar-form</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #header --&gt;
+&lt;div id="header" class="app-header"&gt;
+  &lt;!-- BEGIN header-nav --&gt;
+  &lt;div class="navbar-nav"&gt;
+    &lt;div class="navbar-item"&gt;
+      &lt;a href="#" data-toggle="app-header-floating-form" class="navbar-link icon"&gt;
+        &lt;i class="material-icons"&gt;search&lt;/i&gt;
+      &lt;/a&gt;
+      
+      &lt;!-- REMOVE IT --&gt;
+      &lt;div class="navbar-item navbar-form"&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/div&gt;
+    ...
+  &lt;/div&gt;
+  &lt;!-- END header-nav --&gt;
+  
+  &lt;div class="navbar-floating-form"&gt;
+    &lt;button class="search-btn" type="submit"&gt;&lt;i class="material-icons"&gt;search&lt;/i&gt;&lt;/button&gt;
+    &lt;input type="text" class="form-control" placeholder="Search Something..." /&gt;
+    &lt;a href="#" class="close" data-dismiss="app-header-floating-form"&gt;
+      &lt;i class="material-icons"&gt;close&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+							</li>
+							<li>
+								<div style="padding-bottom: 5px">Change the <code>.app-loader</code>  in <code>template_django/ColorAdminApp/templates/base.html</code>.</div>
+<pre class="prettyprint linenums">
+&lt;!-- BEGIN #loader --&gt;
+&lt;div id="loader" class="app-loader"&gt;
+  &lt;div class="material-loader"&gt;
+    &lt;svg class="circular" viewBox="25 25 50 50"&gt;
+      &lt;circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"&gt;&lt;/circle&gt;
+    &lt;/svg&gt;
+    &lt;div class="message"&gt;Loading...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- END #loader --&gt;
+</pre>
+							</li>
+						</ol>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="scss"><strong>L) SCSS</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p><b>Global Variables</b></p>
+						<p>
+							The <code>/ColorAdminApp/gulp/src/scss/_variables.scss</code> file contains the variables that control the styles of your application.
+						</p>
+						<p>
+							To edit these variables, navigate to the <code>/ColorAdminApp/gulp/src/scss/_variables.scss</code> file in your code editor and modify the values of the variables to suit your needs.
+						</p>
+						<pre class="prettyprint linenums">&lt;!-- global variable --&gt;
+/ColorAdminApp/gulp/src/scss/_variables.scss
+</pre>
+						<p><b>Dark Mode Variables</b></p>
+						<p>
+							The <code>/ColorAdminApp/gulp/src/scss/_variables-dark.scss</code> file contains the variables that control the styles for dark mode. 
+							These variables are used in conjunction with the variables in the <code>/ColorAdminApp/gulp/src/scss/_variables.scss</code> file to provide different values for light and dark modes.
+						</p>
+						<pre class="prettyprint linenums">&lt;!-- dark mode variable --&gt;
+/ColorAdminApp/gulp/src/scss/_variables-dark.scss
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="npm-package"><strong>M) NPM Package</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Below is the list of package that has been installed in this project. You may use the following example to find the package from their official website.
+							<code>https://www.npmjs.com/package/</code><code>bootstrap</code>
+						</p>
+<pre class="prettyprint linenums">
+{
+  "name": "color-admin",
+  "version": "5.5.2",
+  "description": "Color Admin",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SeanTheme",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-copy": "^5.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-less": "^5.0.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-rename": "^2.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-variables": "^1.2.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "1.77.7"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@fullcalendar/bootstrap": "^6.1.18",
+    "@fullcalendar/core": "^6.1.18",
+    "@fullcalendar/daygrid": "^6.1.18",
+    "@fullcalendar/interaction": "^6.1.18",
+    "@fullcalendar/list": "^6.1.18",
+    "@fullcalendar/timegrid": "^6.1.18",
+    "@highlightjs/cdn-assets": "^11.11.1",
+    "abpetkov-powerange": "github:npmcomponent/abpetkov-powerange",
+    "angular": "^1.8.3",
+    "angular-ui-bootstrap": "^2.5.6",
+    "angular-ui-router": "^1.0.30",
+    "animate.css": "^4.1.1",
+    "apexcharts": "4.7",
+    "blueimp-file-upload": "^10.32.0",
+    "blueimp-gallery": "^3.4.0",
+    "bootstrap": "^5.3.7",
+    "bootstrap-datepicker": "^1.10.0",
+    "bootstrap-daterangepicker": "^3.1.0",
+    "bootstrap-datetime-picker": "^2.4.4",
+    "bootstrap-icons": "^1.13.1",
+    "bootstrap-social": "^5.1.1",
+    "bootstrap-timepicker": "^0.5.2",
+    "bootstrap3-wysihtml5-bower": "^0.3.3",
+    "chart.js": "^4.5.0",
+    "clipboard": "^2.0.11",
+    "d3": "^3.5.17",
+    "datatables.net": "^2.3.2",
+    "datatables.net-autofill": "^2.7.0",
+    "datatables.net-autofill-bs5": "^2.7.0",
+    "datatables.net-bs5": "^2.3.2",
+    "datatables.net-buttons": "^3.2.4",
+    "datatables.net-buttons-bs5": "^3.2.4",
+    "datatables.net-colreorder": "^2.1.1",
+    "datatables.net-colreorder-bs5": "^2.1.1",
+    "datatables.net-fixedcolumns": "^5.0.4",
+    "datatables.net-fixedcolumns-bs5": "^5.0.4",
+    "datatables.net-fixedheader": "^4.0.3",
+    "datatables.net-fixedheader-bs5": "^4.0.3",
+    "datatables.net-keytable": "^2.12.1",
+    "datatables.net-keytable-bs5": "^2.12.1",
+    "datatables.net-responsive": "^3.0.5",
+    "datatables.net-responsive-bs5": "^3.0.5",
+    "datatables.net-rowreorder": "^1.5.0",
+    "datatables.net-rowreorder-bs5": "^1.5.0",
+    "datatables.net-scroller": "^2.4.3",
+    "datatables.net-scroller-bs5": "^2.4.3",
+    "datatables.net-select": "^3.0.1",
+    "datatables.net-select-bs5": "^3.0.1",
+    "datepickk": "^1.4.1",
+    "dropzone": "^5.9.3",
+    "flag-icons": "^7.5.0",
+    "flot": "^4.2.6",
+    "gritter": "^1.7.4",
+    "intro.js": "^7.2.0",
+    "ion-rangeslider": "^2.3.1",
+    "ionicons": "^7.4.0",
+    "isotope-layout": "^3.0.6",
+    "jquery": "^3.7.1",
+    "jquery-knob": "^1.2.11",
+    "jquery-migrate": "^3.5.2",
+    "jquery-mockjax": "^2.6.1",
+    "jquery-sparkline": "^2.4.0",
+    "jquery-ui-dist": "^1.13.3",
+    "jquery.maskedinput": "^1.4.1",
+    "js-cookie": "^3.0.5",
+    "jstree": "^3.3.17",
+    "jszip": "^3.10.1",
+    "jvectormap-content": "^0.1.0",
+    "jvectormap-next": "^3.1.1",
+    "kbw-countdown": "^2.1.1",
+    "lightbox2": "^2.11.5",
+    "lity": "^2.4.1",
+    "masonry-layout": "^4.2.2",
+    "moment": "^2.30.1",
+    "nvd3": "^1.8.6",
+    "oclazyload": "^1.1.0",
+    "pace-js": "^1.2.4",
+    "parsleyjs": "^2.9.2",
+    "pdfmake": "^0.2.20",
+    "perfect-scrollbar": "^1.5.6",
+    "photoswipe": "^5.4.4",
+    "quill": "^2.0.3",
+    "raphael": "^2.3.0",
+    "select-picker": "^0.3.2",
+    "select2": "^4.0.13",
+    "simple-line-icons": "^2.5.5",
+    "spectrum-colorpicker2": "^2.0.10",
+    "summernote": "^0.9.1",
+    "sweetalert": "^2.1.2",
+    "swiper": "^11.2.10",
+    "switchery": "github:abpetkov/switchery",
+    "tag-it": "^2.0.0",
+    "x-editable-bs4": "^1.5.6"
+  }
+}
+</pre>
+					</div>
+				</div><!-- end row-fluid -->
+			</div><!-- end span12 -->
+		</div><!-- end row-fluid -->
+	</div><!-- end container -->
+	
+	<footer class="footer">
+		<div class="container text-left">
+			<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes, you might consider visiting the forums and inbox us your question via <a href="https://wrapbootstrap.com/user/seanngu/message">wrapbootstrap</a>.</p> 
+			<br />
+			<p class="append-bottom alt large"><strong>Sean Ngu</strong></p>
+			<p><a href="#top">Go To Table of Contents</a></p>
+		</div>
+	</footer><!-- end footer -->
+	
+	<script src="assets/bootstrap/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-transition.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-alert.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-modal.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-dropdown.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-scrollspy.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tab.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tooltip.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-popover.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-button.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-collapse.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-carousel.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-typeahead.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-affix.js"></script>
+
+	<script src="assets/bootstrap/js/holder/holder.js"></script>
+	<script src="assets/bootstrap/js/google-code-prettify/prettify.js"></script>
+	<script src="assets/bootstrap/js/application.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<script>
+  import ApexCharts from '/src/components/plugins/ApexCharts.svelte';
+  import { onMount } from 'svelte';
+  import { appVariables } from '/src/stores/appVariables.js';
+  
+  let chartData = [];
+  
+  function getChartData(appVariables) {
+    return {
+      options: {
+        chart: { height: 350, type: 'heatmap' },
+        series: [
+          { name: 'Metric1', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+          { name: 'Metric2', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+          { name: 'Metric3', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+          { name: 'Metric4', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+          { name: 'Metric5', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+          { name: 'Metric6', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+          { name: 'Metric7', data: generateHeatmapData(18, {  min: 0, max: 90 }) },
+          { name: 'Metric8', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+          { name: 'Metric9', data: generateHeatmapData(18, {  min: 0, max: 90 }) }
+        ],
+        dataLabels: { enabled: false },
+        colors: [appVariables.color.primary],
+        title: { text: 'HeatMap Chart (Single color)' }
+      }
+    };
+  }
+
+  onMount(async () => {
+    appVariables.subscribe(value => {
+      if (value.color) {
+        chartData = getChartData(value);
+      }
+    });
+  });
+</script>
+
+{#if chartData}
+  <ApexCharts options={chartData.options}></ApexCharts>
+{/if}

@@ -1,0 +1,13 @@
+<script>
+  import { onMount, onDestroy } from 'svelte';
+  import { appOptions } from '/src/stores/appOptions.js';
+  
+  onMount(async () => {
+    $appOptions.appSidebarHide = true;
+  });
+  
+  onDestroy(() => {
+    $appOptions.appSidebarHide = false;
+  });
+</script>
+

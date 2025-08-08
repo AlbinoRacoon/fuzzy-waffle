@@ -1,0 +1,13 @@
+<script>
+  import Panel from '/src/components/bootstrap/Panel.svelte';
+  import PanelHeader from '/src/components/bootstrap/PanelHeader.svelte';
+  import PanelTitle from '/src/components/bootstrap/PanelTitle.svelte';
+  import PanelExpandToggler from '/src/components/bootstrap/PanelExpandToggler.svelte';
+</script>
+
+<Panel>
+  <PanelHeader>
+    <PanelTitle>Panel Title</PanelTitle>
+    <PanelExpandToggler />
+  </PanelHeader>
+</Panel>

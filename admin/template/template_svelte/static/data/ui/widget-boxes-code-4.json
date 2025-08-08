@@ -1,0 +1,16 @@
+<script>
+  import Panel from '/src/components/bootstrap/Panel.svelte';
+  import PanelHeader from '/src/components/bootstrap/PanelHeader.svelte';
+  import PanelTitle from '/src/components/bootstrap/PanelTitle.svelte';
+</script>
+
+<Panel>
+  <PanelHeader>
+    <PanelTitle>Panel Header with Progress Bar</PanelTitle>
+    <div class="progress h-10px bg-gray-700 w-150px">
+      <div class="progress-bar progress-bar-success progress-bar-striped progress-bar-animated fw-bold" style="width: 40%">
+        40%
+      </div>
+    </div>
+  </PanelHeader>
+</Panel>

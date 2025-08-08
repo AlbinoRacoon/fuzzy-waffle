@@ -1,0 +1,18 @@
+<script>
+  import Card from '/src/components/bootstrap/Card.svelte';
+</script>
+
+<!-- using grid -->
+<div class="row">
+  <div class="col-sm-8">
+    <Card>...</Card>
+  </div>
+</div>
+
+<!-- using utilities -->
+<Card class="w-25">...</Card>
+<Card class="w-50">...</Card>
+<Card class="w-75">...</Card>
+
+<!-- using custom css -->
+<Card style="width: 18rem;">...</Card>

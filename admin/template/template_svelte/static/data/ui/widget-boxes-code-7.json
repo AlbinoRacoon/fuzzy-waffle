@@ -1,0 +1,7 @@
+<script>
+  import Panel from '/src/components/bootstrap/Panel.svelte';
+</script>
+
+<Panel class="panel-inverse panel-hover-icon">
+  ...
+</Panel>

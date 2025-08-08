@@ -1,0 +1,33 @@
+<script>
+  import ApexCharts from '/src/components/plugins/ApexCharts.svelte';
+  import { onMount } from 'svelte';
+  import { appVariables } from '/src/stores/appVariables.js';
+  
+  let chartData = [];
+  
+  function getChartData(appVariables) {
+    return {
+      options: {
+        chart: { height: 365, type: 'pie' },
+        series: [44, 55, 13, 43, 22],
+        dataLabels: { dropShadow: { enabled: false, top: 1, left: 1, blur: 1, opacity: 1 } },
+        stroke: { show: false },
+        colors: [ 'rgba('+ appVariables.color.pinkRgb +', .75)',  'rgba('+ appVariables.color.warningRgb +', .75)',  'rgba('+appVariables.color.primaryRgb +', .75)', 'rgba('+ appVariables.color.darkRgb + ', .5)',  'rgba('+appVariables.color.indigoRgb +', .75)'],
+        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+        title: { text: 'HeatMap Chart (Single color)' }
+      }
+    };
+  }
+
+  onMount(async () => {
+    appVariables.subscribe(value => {
+      if (value.color) {
+        chartData = getChartData(value);
+      }
+    });
+  });
+</script>
+
+{#if chartData}
+  <ApexCharts options={chartData.options}></ApexCharts>
+{/if}

@@ -1,0 +1,25 @@
+<script>
+  import Card from '/src/components/bootstrap/Card.svelte';
+  import CardBody from '/src/components/bootstrap/CardBody.svelte';
+  import CardHeader from '/src/components/bootstrap/CardHeader.svelte';
+</script>
+
+<Card>
+  <CardHeader>
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      ...
+    </ul>
+  </CardHeader>
+</Card>
+
+<!-- nav-pills -->
+<Card>
+  <CardHeader>
+    <ul class="nav nav-pills card-header-pills">
+      ...
+    </ul>
+  </CardHeader>
+</Card>

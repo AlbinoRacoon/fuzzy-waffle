@@ -1,0 +1,12 @@
+<script>
+  import { onMount } from 'svelte';
+  
+  onMount(async () => {
+    import('bootstrap-social/bootstrap-social.css');
+  });
+</script>
+
+<!-- html -->
+<button class="btn btn-social btn-adn">
+  <span class="fab fa-adn"></span> Sign in with App.net
+</button>

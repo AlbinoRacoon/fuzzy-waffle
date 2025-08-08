@@ -1,0 +1,28 @@
+<script>
+  import Card from '/src/components/bootstrap/Card.svelte';
+  import CardHeader from '/src/components/bootstrap/CardHeader.svelte';
+  import CardBody from '/src/components/bootstrap/CardBody.svelte';
+</script>
+
+<!-- basic usage -->
+<Card>
+  <CardHeader class="fw-bold small">CARD HEADER HERE</CardHeader>
+  <CardBody>
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-3 text-inverse text-opacity-50">Card subtitle</h6>
+    <p class="card-text mb-3">...</p>
+    <div>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </CardBody>
+</caCardrd>
+
+<!-- card with list-group -->
+<Card>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">...</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+</Card>

@@ -1,0 +1,19 @@
+<script>
+  import Panel from '/src/components/bootstrap/Panel.svelte';
+  import PanelHeader from '/src/components/bootstrap/PanelHeader.svelte';
+  import PanelBody from '/src/components/bootstrap/PanelBody.svelte';
+</script>
+
+<Panel class="panel-inverse">
+  <PanelHeader>...</PanelHeader>
+  <div class="alert alert-success alert-dismissible fade in rounded-0 mb-0">
+    <div class="d-flex">
+      <i class="fa fa-check fa-2x me-1"></i>
+      <div class="mb-0 ps-2">
+        ...
+      </div>
+    </div>
+    <button type="button" class="btn-close ms-3" data-bs-dismiss="alert"></button>
+  </div>
+  <PanelBody>...</PanelBody>
+</Panel>

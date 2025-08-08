@@ -1,0 +1,12 @@
+<script>
+  import { onMount, onDestroy } from 'svelte';
+  import { appOptions } from '../../../stores/appOptions.js';
+  
+  onMount(async () => {
+    $appOptions.appTopMenu = true;
+  });
+  
+  onDestroy(() => {
+    $appOptions.appTopMenu = false;
+  });
+</script>

@@ -1,0 +1,21 @@
+<script>
+  import { HsvPicker } from 'svelte-color-picker';
+  
+  let color = '#000000';
+  
+  function colorCallback(rgba) {
+    color = 'rgba('+ rgba.detail.r +','+ rgba.detail.g +','+ rgba.detail.b +','+ rgba.detail.a +')';
+  }
+</script>
+
+<!-- html -->
+<div class="input-group position-relative">
+  <span class="input-group-text p-1">
+    <span class="h-20px w-20px rounded d-block mx-3px" style="background: {color}"></span>
+  </span>
+  <a href="#/" class="stretched-link" data-bs-toggle="dropdown" data-bs-auto-close="outside"><span class="d-none">&nbsp;</span></a>
+  <div class="dropdown-menu p-2">
+    <HsvPicker on:colorChange={colorCallback} startColor={color}/>
+  </div>
+  <input type="text" bind:value={color} class="form-control">
+</div>

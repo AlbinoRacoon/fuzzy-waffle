@@ -1,0 +1,22 @@
+<script>
+  import AppFooter from '/src/components/app/AppFooter.svelte';
+  import PerfectScrollbar from '/src/components/plugins/PerfectScrollbar.svelte';
+  import { onMount, onDestroy } from 'svelte';
+  import { appOptions } from '/src/stores/appOptions.js';
+  
+  onMount(async () => {
+    $appOptions.appContentClass = 'd-flex flex-column p-0';
+    $appOptions.appContentFullHeight = true;
+  });
+  
+  onDestroy(() => {
+    $appOptions.appContentClass = '';
+    $appOptions.appContentFullHeight = false;
+  });
+</script>
+
+<PerfectScrollbar class="app-content-padding flex-grow-1 overflow-hidden h-100">
+  content here...
+</PerfectScrollbar>
+
+<AppFooter class="m-0" />
